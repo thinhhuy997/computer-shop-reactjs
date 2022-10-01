@@ -1,0 +1,4 @@
+.table-product-detail-info tr td:first-child{
+    max-width: 60px !important;
+    /* font-weight: 600; */
+}
