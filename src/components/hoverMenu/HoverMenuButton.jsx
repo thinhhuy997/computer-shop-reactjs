@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./hoverMenuButton.css";
 const HoverMenuButton = (props) => {
   const imageLink = props.imageLink;
@@ -46,39 +47,63 @@ const HoverMenuButton = (props) => {
                     <div class="col-md-3 col-lg-4 col-xl-3 me-auto mb-4">
                       {/* <!-- Content --> */}
                       {/* <!-- Content --> */}
-                      <p class="text-uppercase fw-bold mb-2 item-header">
-                        Cần câu đơn/đài
+                      <p class="text-uppercase fw-bold mb-3 item-header">
+                        CPU - Bộ vi xử lý
                       </p>
-                      <p className="m-0 item-name mb-2">Cần Gama Seiko</p>
-                      <p className="m-0 item-name my-2">Cần Guide</p>
-                      <p className="m-0 item-name my-2">Cần Fishing King</p>
-                      <p className="m-0 item-name my-2">Cần Benting</p>
-                      <p className="m-0 item-name my-2">Cần ISO - Trợ Máy</p>
+                      <Link
+                        to="/collections/cpu-intel"
+                        className="m-0 p-0 pb-1 item-name bg-transparent"
+                      >
+                        CPU Intel
+                      </Link>
+                      <Link
+                        to="/collections/cpu-amd"
+                        className="m-0 p-0 pb-1 item-name bg-transparent"
+                      >
+                        CPU AMD
+                      </Link>
                     </div>
                     {/* <!-- Grid column --> */}
                     {/* <!-- Grid column --> */}
                     <div class="col-md-3 col-lg-4 col-xl-3 me-auto mb-4">
                       {/* <!-- Content --> */}
-                      <p class="text-uppercase fw-bold mb-2 item-header">
-                        Dây câu đài
+                      {/* <!-- Content --> */}
+                      <p class="text-uppercase fw-bold mb-3 item-header">
+                        CPU - Bộ vi xử lý
                       </p>
-                      <p className="m-0 item-name mb-2">Dây Cước Trục Đài</p>
-                      <p className="m-0 item-name my-2">Dây Cước Link / Thẻo</p>
-                      <p className="m-0 item-name my-2">
-                        Dây Dù PE Link / Thẻo
-                      </p>
+                      <Link
+                        to="/collections/cpu-intel"
+                        className="m-0 p-0 pb-1 item-name bg-transparent"
+                      >
+                        CPU Intel
+                      </Link>
+                      <Link
+                        to="/collections/cpu-amd"
+                        className="m-0 p-0 pb-1 item-name bg-transparent"
+                      >
+                        CPU AMD
+                      </Link>
                     </div>
                     {/* <!-- Grid column --> */}
                     {/* <!-- Grid column --> */}
                     <div class="col-md-3 col-lg-4 col-xl-3 me-auto mb-4">
                       {/* <!-- Content --> */}
-                      <p class="text-uppercase fw-bold mb-2 item-header">
-                        PHAO CÂU ĐÀI
+                      {/* <!-- Content --> */}
+                      <p class="text-uppercase fw-bold mb-3 item-header">
+                        CPU - Bộ vi xử lý
                       </p>
-                      <p className="m-0 item-name mb-2">Phao Nano</p>
-                      <p className="m-0 item-name my-2">Phao Cỏ</p>
-                      <p className="m-0 item-name my-2">Phao Lông Công</p>
-                      <p className="m-0 item-name my-2">Phao Đèn Đài</p>
+                      <Link
+                        to="/collections/cpu-intel"
+                        className="m-0 p-0 pb-1 item-name bg-transparent"
+                      >
+                        CPU Intel
+                      </Link>
+                      <Link
+                        to="/collections/cpu-amd"
+                        className="m-0 p-0 pb-1 item-name bg-transparent"
+                      >
+                        CPU AMD
+                      </Link>
                     </div>
                     {/* <!-- Grid column --> */}
                   </div>

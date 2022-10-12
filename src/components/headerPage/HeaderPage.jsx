@@ -9,14 +9,14 @@ const HeaderPage = () => {
         <div className="row pt-4 pb-4">
           <div className="col-lg-7 col-md-5 d-flex align-items-center">
             {/* brand logo */}
-            <a href="#">
+            <Link to="/">
               <img
                 src="https://tinhocngoisao.cdn.vccloud.vn/wp-content/uploads/2020/05/cropped-STAR-DEN-DO-02-10.png"
                 alt="brand logo"
                 style={{ width: "205.5px", height: "auto" }}
                 className="ms-5"
               />
-            </a>
+            </Link>
 
             {/* list category icon */}
             <svg

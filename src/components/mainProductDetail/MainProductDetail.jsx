@@ -1,24 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 import ProductCarousel from "../productCarousel/ProductCarousel";
 import "./mainProductDetail.css";
+import { thousands_separators } from "../utils";
 const HtmlToReactParser = require("html-to-react").Parser;
 const htmlToReactParser = new HtmlToReactParser();
 
-const images = [
-  {
-    original:
-      "https://product.hstatic.net/200000420363/product/lt_as_b1400ceae-ek4113-2_7e8b91e11c8842849e1b6c7a04950987_master.jpg",
-  },
-  {
-    original:
-      "https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a_master.jpg",
-  },
-  {
-    original:
-      "https://product.hstatic.net/200000420363/product/lt_as_b1400ceae-ek4113-2_7e8b91e11c8842849e1b6c7a04950987_master.jpg",
-  },
-];
+// const images = [
+//   {
+//     original:
+//       "https://product.hstatic.net/200000420363/product/lt_as_b1400ceae-ek4113-2_7e8b91e11c8842849e1b6c7a04950987_master.jpg",
+//   },
+//   {
+//     original:
+//       "https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a_master.jpg",
+//   },
+//   {
+//     original:
+//       "https://product.hstatic.net/200000420363/product/lt_as_b1400ceae-ek4113-2_7e8b91e11c8842849e1b6c7a04950987_master.jpg",
+//   },
+// ];
 
 const product_detail_info_rows_input = `<tr style="height: 19px;">
 <td style="width: 45.5014%; height: 19px;">
@@ -202,9 +204,61 @@ const product_detail_info_rows_input = `<tr style="height: 19px;">
 <td style="width: 54.4986%; height: 18px;">Trung Quốc</td>
 </tr>`;
 
+// new 10/04/2022 - data from crawler
+const product_detail_info_ul_list = `\n\t\t\t\t\t\t\tCPU Intel Core i5 11400F (2.60 Up to 4.40GHz, 12M, 6 Cores 12 Threads) Box Chính Hãng (Không GPU)\n\t\t\t\t\t\t`;
+
 const MainProductDetail = () => {
+  const { slug } = useParams();
+  const [product, setProduct] = useState();
+  const [images, setImages] = useState([]);
+  const product_detail_info = product ? product.description_from_crawler : null;
+
+  // const images = [
+  //   {
+  //     original:
+  //       "https://product.hstatic.net/200000420363/product/lt_as_b1400ceae-ek4113-2_7e8b91e11c8842849e1b6c7a04950987_master.jpg",
+  //   },
+  // ];
+
+  useEffect(() => {
+    LoadDetailProduct();
+  }, []);
+
+  // useEffect(() => {
+  //   setImages((prev) => {
+  //     return [
+  //       ...prev,
+  //       {
+  //         original: product.image_urls,
+  //       },
+  //     ];
+  //   });
+  // }, [product]);
+
+  useEffect(() => {
+    console.log(product);
+  }, [product]);
+
+  const LoadDetailProduct = () => {
+    axios({
+      method: "GET",
+      url: `http://127.0.0.1:8000/api/product-detail/${slug}/`,
+    })
+      .then((res) => {
+        setProduct(res.data);
+        const img_data = [];
+        res.data.image_urls.map((iurl) => {
+          img_data.push({
+            original: iurl,
+          });
+        });
+        setImages(img_data);
+      })
+      .catch((e) => console.dir(e));
+  };
+
   return (
-    <div className="container" style={{ height: "1500px" }}>
+    <div className="container">
       <div className="row">
         <div
           className="col-12 d-flex align-items-center justify-content-between border-bottom"
@@ -212,7 +266,7 @@ const MainProductDetail = () => {
         >
           {/* product name */}
           <p className="m-0 p-0" style={{ fontSize: "16px", fontWeight: 500 }}>
-            CPU AMD A4 3300 (2.50GHz, 2 Cores 2 Threads, FM1) TRAY
+            {product && product.name}
           </p>
           {/* facebook btn group */}
           <div className="d-flex">
@@ -253,7 +307,9 @@ const MainProductDetail = () => {
             className="d-flex align-items-center border-bottom"
             style={{ height: "60px", fontWeight: 900, fontSize: "20px" }}
           >
-            <span className="text-danger">110,000₫</span>
+            <span className="text-danger">
+              {product && thousands_separators(product.price)} ₫
+            </span>
           </div>
           {/* buttons */}
           <p className="m-0 p-0 fw-bold mt-2 mb-3" style={{ fontSize: "13px" }}>
@@ -317,10 +373,18 @@ const MainProductDetail = () => {
               Cấu hình chi tiết
             </h6>
             <table class="table table-striped table-product-detail-info">
-              <tbody style={{ fontSize: "13px" }}>
-                {htmlToReactParser.parse(product_detail_info_rows_input)}
-              </tbody>
+              {htmlToReactParser.parse(product_detail_info)}
             </table>
+          </div>
+          {/* show more product detail info */}
+          <div className="w-100 text-center">
+            <button
+              type="button"
+              className="btn btn-light border-primary text-primary"
+              style={{ fontSize: "14px", width: "60%" }}
+            >
+              Xem thêm cấu hình chi tiết
+            </button>
           </div>
         </div>
       </div>

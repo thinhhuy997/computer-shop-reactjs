@@ -16,8 +16,9 @@ function App() {
       <Routes>
           <Route index element={<Home />} />
           <Route path="login-signup" element={<LoginAndSignup />} />
-          <Route path="collections" element={<Collection />} />
-          <Route path="product" element={<ProductDetail />} />
+          <Route path="collections/:categoryName" element={<Collection />} >
+          </Route>
+          <Route path="product/:slug" element={<ProductDetail />} />
           {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
     </BrowserRouter>

@@ -2,3 +2,14 @@
     max-width: 60px !important;
     /* font-weight: 600; */
 }
+
+.hrvproduct-tabs ul {
+    list-style-type: none;
+    font-size: 14px;
+    padding: 0;
+}
+
+.hrvproduct-tabs ul li{
+    padding: 0;
+    padding-bottom: 3px;
+}

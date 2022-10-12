@@ -631,6 +631,630 @@ const test = () => {
           <td style="width: 54.4986%; height: 18px;">Trung Quốc</td>
         </tr>
       </tbody>
+      {/* MainCollection.jsx - product column */}
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3300 (2.50GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>110,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/cpu-amd-a4-3400_14401cf7583544e8b0e747fe02a94d55.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3400 (2.70GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>320,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3300 (2.50GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>110,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/cpu-amd-a4-3400_14401cf7583544e8b0e747fe02a94d55.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3400 (2.70GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>320,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3300 (2.50GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>110,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/cpu-amd-a4-3400_14401cf7583544e8b0e747fe02a94d55.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3400 (2.70GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>320,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3300 (2.50GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>110,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/cpu-amd-a4-3400_14401cf7583544e8b0e747fe02a94d55.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3400 (2.70GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>320,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/amd-a4-3300-600x600_23b1704698a64c23a572cf49147d256a.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3300 (2.50GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>110,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      <div className="col p-0">
+        <div className="product-inner position-relative border collection-item">
+          <div
+            className="product-thumbnail d-flex justify-content-center"
+            style={{ zIndex: -1 }}
+          >
+            <a href="#">
+              <img
+                src="https://product.hstatic.net/200000420363/product/cpu-amd-a4-3400_14401cf7583544e8b0e747fe02a94d55.jpg"
+                alt="product thumbnail"
+                style={{ width: "100%", height: "auto", zIndex: 1 }}
+              />
+            </a>
+          </div>
+          <div className="product-details pt-2 pb-3">
+            <Link
+              href="#"
+              className="text-decoration-none fw-normal text-center"
+            >
+              <h2
+                style={{
+                  fontSize: "13.5px",
+                  fontWeight: 400,
+                }}
+                className="m-0 text-dark collection-item-name"
+              >
+                CPU AMD A4 3400 (2.70GHz, 2 Cores 2 Threads, FM1) TRAY
+              </h2>
+            </Link>
+            <div
+              className="product-price-box mt-3 mb-1 text-danger"
+              style={{
+                fontSize: "14px",
+                textAlign: "center",
+                fontWeight: 500,
+              }}
+            >
+              <span>320,000đ</span>
+            </div>
+          </div>
+          {/* icon cart */}
+          <button
+            type="button"
+            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+            data-bs-container="body"
+          >
+            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+          </button>
+          {/* text bubble */}
+          <div
+            class="speech-bubble position-absolute start-50 translate-middle"
+            contenteditable
+          >
+            Thêm vào giỏ hàng
+          </div>
+        </div>
+      </div>
+      {/* mainCollection.jsx */}
+      <div className="product-inner position-relative border collection-item">
+        <div
+          className="product-thumbnail d-flex justify-content-center"
+          style={{ zIndex: -1 }}
+        >
+          <a href="#">
+            <img
+              src={product.image_urls[0]}
+              alt="product thumbnail"
+              style={{ width: "100%", height: "auto", zIndex: 1 }}
+            />
+          </a>
+        </div>
+        <div className="product-details pt-2 pb-3">
+          <Link href="#" className="text-decoration-none fw-normal text-center">
+            <h2
+              style={{
+                fontSize: "13.5px",
+                fontWeight: 400,
+              }}
+              className="m-0 text-dark collection-item-name"
+            >
+              {product.name}
+            </h2>
+          </Link>
+          <div
+            className="product-price-box mt-3 mb-1 text-danger"
+            style={{
+              fontSize: "14px",
+              textAlign: "center",
+              fontWeight: 500,
+            }}
+          >
+            <span>{thousands_separators(product.price)}đ</span>
+          </div>
+        </div>
+        {/* icon cart */}
+        <button
+          type="button"
+          className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+          data-bs-container="body"
+        >
+          <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+        </button>
+        {/* text bubble */}
+        <div
+          class="speech-bubble position-absolute start-50 translate-middle"
+          contenteditable
+        >
+          Thêm vào giỏ hàng
+        </div>
+      </div>
     </>
   );
 };

@@ -12,18 +12,25 @@ const ProductCarousel = (props) => {
       data-bs-ride="carousel"
     >
       <div class="carousel-inner">
-        <div class="carousel-item product-carousel-item active">
-          <img src={items[0].original} class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item product-carousel-item">
-          <img src={items[1].original} class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item product-carousel-item">
-          <img src={items[2].original} class="d-block w-100" alt="..." />
-        </div>
+        {items &&
+          items.map((item, index) => (
+            <div
+              className={
+                index == 0
+                  ? `carousel-item product-carousel-item active`
+                  : `carousel-item product-carousel-item`
+              }
+            >
+              <img src={item.original} class="d-block w-100" alt="..." />
+            </div>
+          ))}
       </div>
       <button
-        class="carousel-control-prev carousel-directional-btn position-absolute top-50 start-0 translate-middle bg-white text-dark"
+        className={
+          items.length > 1
+            ? `carousel-control-prev carousel-directional-btn position-absolute top-50 start-0 translate-middle bg-white text-dark`
+            : `d-none`
+        }
         type="button"
         data-bs-target="#productCarousel"
         data-bs-slide="prev"
@@ -33,19 +40,23 @@ const ProductCarousel = (props) => {
         <span class="visually-hidden">Previous</span>
       </button>
       <button
-        class="carousel-control-prev carousel-directional-btn position-absolute top-50 start-100 translate-middle bg-white text-dark"
+        className={
+          items.length > 1
+            ? `carousel-control-prev carousel-directional-btn position-absolute top-50 start-100 translate-middle bg-white text-dark`
+            : `d-none`
+        }
         type="button"
         data-bs-target="#productCarousel"
         data-bs-slide="prev"
         style={{ width: "25px", height: "45px" }}
       >
         <i class="fa-solid fa-chevron-right" style={{ fontSize: "25px" }}></i>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden">Next</span>
       </button>
       {/* show all imgs */}
       <div className="w-100 text-center" style={{ fontSize: "13.5px" }}>
         <Link className="text-primary me-1">Xem tất cả hình</Link>
-        <span style={{ fontSize: "13px" }}>(1/4)</span>
+        <span style={{ fontSize: "13px" }}>(1/{items.length})</span>
       </div>
       {/* product policy */}
       <div className="w-100 mt-4">
