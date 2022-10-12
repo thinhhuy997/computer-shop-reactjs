@@ -1,13 +1,55 @@
-import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { thousands_separators } from "../utils";
 
 const HeaderPage = () => {
+  const [searchParam, setSearchParam] = useState("");
+  const [products, setProducts] = useState([]);
+  const [productCount, setProductCount] = useState(0);
+
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (searchParam != "") {
+      axios({
+        method: "GET",
+        url: `http://127.0.0.1:8000/api/product-list-create/?search=${searchParam}&limit=5`,
+      })
+        .then((res) => {
+          setProducts(res.data.results);
+          setProductCount(res.data.count);
+        })
+        .catch((e) => console.dir(e));
+    } else {
+      setProducts([]);
+      setProductCount(0);
+    }
+  }, [searchParam]);
+
+  // const handleSearchOnchange = (searchParam) => {
+  //   setSearchParam(searchParam);
+  //   axios({
+  //     method: "GET",
+  //     url: `http://127.0.0.1:8000/api/product-list-create/?search=${searchParam}&limit=5`,
+  //   })
+  //     .then((res) => {
+  //       setProducts(res.data.results);
+  //       setProductCount(res.data.count);
+  //     })
+  //     .catch((e) => console.dir(e));
+  // };
+
+  const handleNavigateToDetailProduct = (slug) => {
+    navigate(`/product/${slug}}`, { replace: true });
+  };
+
   return (
     <>
       {/* desktop */}
       <div className="container d-none d-md-block">
         <div className="row pt-4 pb-4">
-          <div className="col-lg-7 col-md-5 d-flex align-items-center">
+          <div className="col-lg-9 col-md-5 d-flex align-items-center">
             {/* brand logo */}
             <Link to="/">
               <img
@@ -40,38 +82,96 @@ const HeaderPage = () => {
             {/* search bar */}
             <div
               className="input-group d-none d-lg-flex"
-              style={{ width: "347px", height: "42px" }}
+              style={{ width: "600px", height: "42px" }}
             >
               <input
                 type="search"
-                className="form-control rounded"
-                placeholder="Bạn muốn tìm sản phẩm nào..."
+                className="form-control rounded dropdown-toggle"
+                placeholder="Bạn tìm gì..."
                 aria-label="Search"
                 aria-describedby="search-addon"
                 style={{ fontSize: "14px" }}
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                value={searchParam}
+                onChange={(e) => setSearchParam(e.target.value)}
               />
               <button
                 type="button"
-                className="btn btn-danger px-4"
+                className="btn btn-danger pe-4"
                 style={{ fontWeight: "500", fontSize: "14px" }}
               >
+                <i class="fa-solid fa-magnifying-glass pe-2"></i>
                 Tìm kiếm
               </button>
+              <ul
+                className="dropdown-menu w-100 shadow border-1 py-0 rounded-0"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                {products &&
+                  products.map((product) => (
+                    <li
+                    // onClick={() =>
+                    //   handleNavigateToDetailProduct(product.slug)
+                    // }
+                    >
+                      <Link
+                        to={`product/${product.slug}`}
+                        className="d-flex dropdown-item p-0 py-1"
+                      >
+                        <img
+                          src={product?.image_urls[0] && product.image_urls[0]}
+                          alt="test"
+                          style={{ width: "45px", height: "45px" }}
+                          className="me-1"
+                        />
+                        <div
+                          className="searching-item-text-group text-decoration-none"
+                          style={{ fontSize: "13px" }}
+                        >
+                          <p className="p-0 m-0 text-dark pb-1">
+                            {product.name}
+                          </p>
+                          <p className="p-0 m-0 text-danger">
+                            {thousands_separators(product.price)}đ
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                <li
+                  className={
+                    productCount !== 0
+                      ? `test text-center py-2 border-top border-1`
+                      : `d-none`
+                  }
+                >
+                  <Link
+                    to="/product"
+                    className="text-decoration-none text-dark"
+                  >
+                    <span style={{ fontSize: "13px" }}>
+                      Xem thêm {productCount} sản phẩm
+                    </span>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="col-lg-5 col-md-7 d-flex align-items-center">
+          <div className="col-lg-3 col-md-7 d-flex align-items-center">
             {/* icon */}
-            <i
+            {/* <i
               style={{ transform: "scaleX(-1)" }}
               class="cil-phone fs-2 d-none d-lg-block"
-            ></i>
+            ></i> */}
             {/* contact */}
-            <div className="mx-3 d-none d-md-block">
+            {/* <div className="mx-3 d-none d-md-block">
               <p className="m-0 text-muted" style={{ fontSize: "14px" }}>
                 Hotline
               </p>
               <p className="m-0 fw-bold">1900 0243 (8:30 - 21:00)</p>
-            </div>
+            </div> */}
 
             {/* cart */}
             <i class="cib-shopify fs-1 mx-5 position-relative">
