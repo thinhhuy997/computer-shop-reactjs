@@ -11,7 +11,7 @@ const ProductDetail = () => {
     <>
       <HeaderPage />
       <MainMenu />
-      <Breadcrumb />
+      <Breadcrumb breadcrumbContents={[""]} />
       <MainProductDetail />
       <Footer />
     </>

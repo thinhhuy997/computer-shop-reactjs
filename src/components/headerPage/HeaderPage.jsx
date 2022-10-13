@@ -148,7 +148,7 @@ const HeaderPage = () => {
                   }
                 >
                   <Link
-                    to="/product"
+                    to={`/search?q=${searchParam}`}
                     className="text-decoration-none text-dark"
                   >
                     <span style={{ fontSize: "13px" }}>

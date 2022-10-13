@@ -1,14 +1,10 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HeaderPage from './components/headerPage/HeaderPage';
-import MainMenu from './components/mainMenu/MainMenu';
-import IntroductorySection from './components/introductorySection/IntroductorySection';
-import BestSeller from './components/bestSeller/BestSeller';
-import ShowingProduct from './components/showingProduct/ShowingProduct';
 import Home from './pages/Home';
 import LoginAndSignup from './pages/LoginAndSignup';
 import Collection from './pages/Collection';
 import ProductDetail from './pages/ProductDetail';
+import Search from './pages/Search';
 function App() {
   return (
     <div className="App">
@@ -17,6 +13,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="login-signup" element={<LoginAndSignup />} />
           <Route path="collections/:categoryName" element={<Collection />} >
+          </Route>
+          <Route path="search/" element={<Search />} >
           </Route>
           <Route path="product/:slug" element={<ProductDetail />} />
           {/* <Route path="*" element={<NoPage />} /> */}

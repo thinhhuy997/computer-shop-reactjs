@@ -10,7 +10,7 @@ const Collection = () => {
     <>
       <HeaderPage />
       <MainMenu />
-      <Breadcrumb />
+      <Breadcrumb breadcrumbContents={[""]} />
       <MainCollection />
       <Footer />
     </>

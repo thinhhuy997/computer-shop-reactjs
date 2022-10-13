@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Breadcrumb = () => {
+const Breadcrumb = (props) => {
+  const breadcrumbContents = props.breadcrumbContents;
   return (
     <div style={{ backgroundColor: "#efefef" }}>
       <div className="container">
@@ -13,17 +14,13 @@ const Breadcrumb = () => {
                     Trang chủ
                   </Link>
                 </li>
-                <li class="breadcrumb-item">
-                  <Link to="#" className="text-decoration-none text-muted">
-                    Danh mục
-                  </Link>
-                </li>
-                <li
-                  class="breadcrumb-item active text-muted"
-                  aria-current="page"
-                >
-                  CPU AMD Cũ
-                </li>
+                {breadcrumbContents.map((brc_item) => (
+                  <li class="breadcrumb-item">
+                    <Link to="#" className="text-decoration-none text-muted">
+                      {brc_item}
+                    </Link>
+                  </li>
+                ))}
               </ol>
             </nav>
           </div>
