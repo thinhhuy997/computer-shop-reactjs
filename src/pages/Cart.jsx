@@ -18,6 +18,8 @@ const Cart = () => {
 
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
+  const [totalCartPrice, setTotalCartPrice] = useState();
+  const [flag, setFlag] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +29,9 @@ const Cart = () => {
         axios
           .post("http://127.0.0.1:8000/api/product-list-by-ids/", { ids: ids })
           .then((response) => {
-            setProducts(response.data.results);
+            let addition_data = response.data.results;
+            addition_data.map((item) => (item.quantity = 1));
+            setProducts(addition_data);
           });
       } catch (error) {
         console.error("Error response:");
@@ -41,10 +45,25 @@ const Cart = () => {
     fetchData();
   }, []);
 
+  const SetProductQuantity = (productId, quantityValue) => {
+    let data = products;
+    data.map((item) => {
+      if (item.id == productId) {
+        item.quantity = quantityValue;
+      }
+    });
+    setProducts(data);
+    setFlag((prev) => prev + 1);
+  };
+
   useEffect(() => {
-    console.log("-----------------------");
-    console.log(products);
-  }, [products]);
+    let total = 0;
+    products.map((item) => {
+      total += item.price * item.quantity;
+    });
+    setTotalCartPrice(total);
+    // alert(totalCartPrice);
+  }, [flag]);
 
   const useStyle = {
     Button: {
@@ -166,117 +185,125 @@ const Cart = () => {
 
           {localStorage.getItem("product_ids") ? (
             <>
-              <div className="col-8 m-0 p-0 border-top border-bottom mt-4 py-2">
-                <div className="row">
-                  <div className="col-2 text-center">
-                    <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                      Sản Phẩm
-                    </span>
+              <div className="row">
+                <div className="col-8 m-0 p-0 border-top border-bottom mt-4 py-2">
+                  <div className="row">
+                    <div className="col-2 text-center">
+                      <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                        Sản Phẩm
+                      </span>
+                    </div>
+                    <div className="col-3 text-center">
+                      <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                        Mô Tả
+                      </span>
+                    </div>
+                    <div className="col-2 text-center">
+                      <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                        Giá
+                      </span>
+                    </div>
+                    <div className="col-2 text-center">
+                      <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                        Số Lượng
+                      </span>
+                    </div>
+                    <div className="col-2 text-center">
+                      <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                        Tổng
+                      </span>
+                    </div>
+                    <div className="col-1 text-center">
+                      <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                        Xoá
+                      </span>
+                    </div>
                   </div>
-                  <div className="col-3 text-center">
-                    <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                      Mô Tả
-                    </span>
-                  </div>
-                  <div className="col-2 text-center">
-                    <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                      Giá
-                    </span>
-                  </div>
-                  <div className="col-2 text-center">
-                    <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                      Số Lượng
-                    </span>
-                  </div>
-                  <div className="col-2 text-center">
-                    <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                      Tổng
-                    </span>
-                  </div>
-                  <div className="col-1 text-center">
-                    <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                      Xoá
-                    </span>
-                  </div>
+                </div>
+                <div className="col-4">
+                  <span>Tổng: {totalCartPrice.toString()}</span>
                 </div>
               </div>
 
-              <div className="col-8 m-0 p-0 mt-4 pb-2">
-                {products &&
-                  products.map((product) => (
-                    <div className="row border-bottom pt-2">
-                      {/* product thumbnail img */}
-                      <div className="col-2 text-center">
-                        <div
-                          className="product-thumbnail py-3"
-                          style={{ zIndex: -1 }}
-                        >
-                          <a href="#" className="pt-4">
-                            <img
-                              src="http://product.hstatic.net/200000420363/product/v.1650.4g.as.tuf.gm.oc.2f_d28ededd079745e4b83b2fcb01c37735_master.jpg"
-                              alt="product thumbnail"
-                              style={{
-                                width: "120px",
-                                height: "auto",
-                                zIndex: 1,
-                              }}
-                            />
-                          </a>
+              <div className="row">
+                <div className="col-8 m-0 p-0 mt-4 pb-2">
+                  {products &&
+                    products.map((product) => (
+                      <div className="row border-bottom pt-2">
+                        {/* product thumbnail img */}
+                        <div className="col-2 text-center">
+                          <div
+                            className="product-thumbnail py-3"
+                            style={{ zIndex: -1 }}
+                          >
+                            <a href="#" className="pt-4">
+                              <img
+                                src={
+                                  product.image_urls && product.image_urls[0]
+                                }
+                                alt="product thumbnail"
+                                style={{
+                                  width: "120px",
+                                  height: "auto",
+                                  zIndex: 1,
+                                }}
+                              />
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                      {/* product description */}
-                      <div className="col-3 text-left">
-                        <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                          Màn Hình Gaming Asus VG249Q1A
-                          (23.8"/FHD/IPS/165Hz/1ms/250nits/HDMI + DP/Phẳng)
-                        </span>
-                      </div>
-                      {/* product price */}
-                      <div className="col-2 text-center">
-                        <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                          3,750,000₫
-                        </span>
-                      </div>
-                      {/* product quantity */}
-                      <div className="col-2">
-                        <div class="form-outline  w-50 mx-auto">
-                          <input
-                            min="1"
-                            max="20"
-                            defaultValue="1"
-                            type="number"
-                            id="typeNumber"
-                            class="form-control"
+                        {/* product description */}
+                        <div className="col-3 text-left">
+                          <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                            {product.name}
+                          </span>
+                        </div>
+                        {/* product price */}
+                        <div className="col-2 text-center">
+                          <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                            {product.price.toLocaleString("en-US")} đ
+                          </span>
+                        </div>
+                        {/* product quantity */}
+                        <div className="col-2">
+                          <div class="form-outline  w-50 mx-auto">
+                            <input
+                              min="1"
+                              max="20"
+                              defaultValue={product.quantity}
+                              // value={product.quantity.toString()}
+                              // value="5"
+                              type="number"
+                              id="typeNumber"
+                              className="form-control text-center"
+                              onChange={(e) =>
+                                SetProductQuantity(product.id, e.target.value)
+                              }
+                              style={{ fontSize: 13.5 }}
+                            />
+                          </div>
+                        </div>
+                        {/* item total price */}
+                        <div className="col-2 text-center">
+                          <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                            {(product.price * product.quantity).toLocaleString(
+                              "en-US"
+                            )}{" "}
+                            đ
+                          </span>
+                        </div>
+                        <div className="col-1 text-center">
+                          <RemoveCircleOutlineIcon
+                            variant="text"
+                            sx={{
+                              ":hover": {
+                                color: "red",
+                              },
+                            }}
                           />
                         </div>
                       </div>
-                      <div className="col-2 text-center">
-                        <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                          3,750,000₫
-                        </span>
-                      </div>
-                      <div className="col-1 text-center">
-                        {/* <div
-                          onMouseEnter={() => setIsShown(true)}
-                          onMouseLeave={() => setIsShown(false)}
-                        >
-                          {isShown ? (
-                            <RemoveCircleIcon />
-                          ) : (
-                            <RemoveCircleOutlineIcon />
-                          )}
-                        </div> */}
-                        <RemoveCircleOutlineIcon
-                          variant="text"
-                          sx={{
-                            ":hover": {
-                              color: "red",
-                            },
-                          }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                </div>
               </div>
             </>
           ) : (
