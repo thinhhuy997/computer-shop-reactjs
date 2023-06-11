@@ -1,0 +1,111 @@
+.react-player {
+    height: auto !important;
+    width: 100%;
+    max-height: 174px;
+    aspect-ratio: 16/9;
+}
+
+.introductory-wrapper {
+    margin-left: 5px;
+}
+
+.introductory-ad-carousel {
+    margin-top: 5px;
+}
+
+.right-side-ads img{
+    height: 220px;
+    object-fit: fill;
+}
+
+.bottom-ads {
+    margin-top: 5px !important;
+}
+
+@media (max-width: 1399.98px) { 
+    #carouselExampleFade {
+        height: 100% !important;
+    }
+
+    .introductory-carousel-img {
+        height: 410px;
+    }
+
+    .right-side-ads img{
+        height: 202px;
+        object-fit: fill;
+    }
+
+    .bottom-ads {
+        margin-top: 0px !important;
+    }
+
+    .bottom-ads img{
+        height: 165.5px;
+        object-fit: fill;
+    }
+ }
+
+
+@media (max-width: 1199.98px) { 
+    .bottom-ads {
+        margin-top: 5px !important;
+    }
+ }
+
+ @media only screen and (max-width: 991px) {
+    #carouselExampleFade {
+        height: 100% !important;
+    }
+
+    .introductory-carousel-img {
+        height: 300px;
+    }
+
+    .right-side-ads img{
+        height: 148px;
+        object-fit: fill;
+    }
+
+    .bottom-ads {
+        margin-top: 3px !important;
+    }
+
+    .bottom-ads img{
+        height: 115.5px;
+        object-fit: fill;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #carouselExampleFade {
+        height: 100% !important;
+    }
+
+    .introductory-carousel-img {
+        height: 300px;
+    }
+
+    .right-side-ads img{
+        height: 148px;
+        object-fit: fill;
+    }
+
+    .bottom-ads {
+        margin-top: 3px !important;
+    }
+
+    .bottom-ads img{
+        height: 115.5px;
+        object-fit: fill;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* #introductoryCarouselMobile {
+        margin
+    } */
+    .introductory-carousel-img {
+        height: 280px !important;
+    }
+}

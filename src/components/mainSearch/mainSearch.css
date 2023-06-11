@@ -1,0 +1,35 @@
+.collection-item-name:hover {
+    color: #dc3545 !important;
+}
+
+.collection-item:hover {
+    z-index: 1;
+    box-shadow: 5px 5px 11px rgba(33,33,33,.1) !important; 
+}
+
+.showmore-btn {
+    position: relative;
+}
+
+.showmore-btn:hover {
+    color: #dc3545;
+}
+
+.showmore-btn::after {
+    position: absolute;
+    top: 45%;
+    left: 66%;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-top: 4px solid black;
+    border-right: 4px solid transparent;
+}
+
+.product-details h2 {
+    height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+}
+

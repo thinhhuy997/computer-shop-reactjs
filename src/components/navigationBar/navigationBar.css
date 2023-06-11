@@ -1,0 +1,39 @@
+@media (max-width: 1199.98px) { 
+    .custom-navbar > div > i{
+        font-size: 12px !important;
+    }
+
+    .custom-navbar > div > span{
+        font-size: 11px !important;
+    }
+ }
+
+ @media only screen and (max-width: 991px) {
+    .category-header {
+        min-width: 180px !important;
+        min-height: 28px !important;
+        height: 28px !important;
+        padding: 0px 0px !important;
+    }
+
+    .category-header > i{
+        font-size: 10px !important;
+    }
+
+    .category-header > span{
+        font-size: 10px !important;
+    }
+
+    .custom-navbar {
+        min-height: 28px !important;
+        height: 28px !important;
+    }
+
+    .custom-navbar > div > i{
+        font-size: 10px !important;
+    }
+
+    .custom-navbar > div > span{
+        font-size: 10px !important;
+    }
+}
