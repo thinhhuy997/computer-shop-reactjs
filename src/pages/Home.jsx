@@ -99,6 +99,14 @@ const Home = () => {
       .catch((e) => console.dir(e));
   }, []);
 
+  // useEffect(() => {
+  //   localStorage.removeItem("product_ids");
+  //   localStorage.setItem("product_ids", []);
+  //   if (localStorage.getItem("product_ids").length == 0) {
+  //     localStorage.removeItem("product_ids");
+  //   }
+  // }, []);
+
   return (
     <>
       <NavigationBar />

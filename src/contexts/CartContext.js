@@ -7,16 +7,16 @@ export default CartContext
 
 export const CartProvider = ({ children }) => {
 
-    let [cartInfo, setCartInfo] = useState({quantity: 0})
+    const [cartItemQuantity, setCartItemQuantity] = useState(0);
+
+    const [emptyCartFlag, setEmptyCartFlag] = useState();
 
     
     let addDataIntoLocalStorage = (data) => {
 
-        if (localStorage.getItem('product_ids') !== null) {
+        if (localStorage.getItem('product_ids')) {
 
             let product_ids = localStorage.getItem('product_ids').split(",")
-
-            console.log(product_ids)
 
             if (product_ids.includes(data.toString())){
                 alert('product already exists!')
@@ -25,14 +25,58 @@ export const CartProvider = ({ children }) => {
                 product_ids.push(data.toString())
                 localStorage.removeItem("product_ids");
                 localStorage.setItem("product_ids", product_ids);
-                alert('add item to arr success!')
+
+                let quantity = localStorage.getItem('product_ids').split(',').length
+                setCartItemQuantity(quantity)
+                alert('Them item vao cart thanh cong!')
             }
         } else {
             localStorage.setItem("product_ids", data.toString());
-            alert('Add item to cart successfully!')
+            setCartItemQuantity(1)
+            alert('Khoi tao cart!')
         }
 
     };
+
+    let RemoveItemFromCartLocalStorage = (id) => {
+
+        if (localStorage.getItem('product_ids') !== null) {
+
+            let product_ids = localStorage.getItem('product_ids').split(",")
+            let remain_product_ids = product_ids.filter(function(product_id){
+                return product_id != id
+            })
+            localStorage.removeItem("product_ids");
+            localStorage.setItem("product_ids", remain_product_ids);
+            
+            setCartItemQuantity(prev => prev - 1)
+            // alert(`Remove item with ${id} successfully!`)
+            // alert(remain_product_ids)
+
+            if (localStorage.getItem('product_ids').length == 0) {
+                localStorage.removeItem("product_ids");
+                setCartItemQuantity(0)
+                // reload page
+                window.location.reload(false);
+            }
+        }
+    };
+
+    let SetCartItemQuantity = () => {
+        if (localStorage.getItem('product_ids') !== null) {
+
+            let product_ids = localStorage.getItem('product_ids').split(",")
+            setCartItemQuantity(product_ids.length)
+        } 
+    }
+
+    let GetCartItemQuantity = () => {
+        if (localStorage.getItem('product_ids') !== null && localStorage.getItem('product_ids').length !== 0) {
+
+            let product_ids = localStorage.getItem('product_ids').split(",")
+            return product_ids.length()
+        } 
+    }
 
     let getStorageValue = (key, defaultValue) => {
         // getting stored value
@@ -43,9 +87,12 @@ export const CartProvider = ({ children }) => {
 
     return (
         <CartContext.Provider value={{
-            cartInfo,
-            setCartInfo,
-            addDataIntoLocalStorage
+            addDataIntoLocalStorage,
+            RemoveItemFromCartLocalStorage,
+            cartItemQuantity,
+            setCartItemQuantity,
+            SetCartItemQuantity,
+            emptyCartFlag, setEmptyCartFlag,
         }}>{children}</CartContext.Provider>
     )
 }

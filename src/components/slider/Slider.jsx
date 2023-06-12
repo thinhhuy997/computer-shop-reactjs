@@ -21,7 +21,12 @@ const Slider = (props) => {
 
   const cartContext = useContext(CartContext);
 
-  const { cartInfo, setCartInfo, addDataIntoLocalStorage } = cartContext;
+  const { addDataIntoLocalStorage, setCartItemQuantity, GetCartItemQuantity } =
+    cartContext;
+
+  const AddItemIntoCart = (productId) => {
+    addDataIntoLocalStorage(productId);
+  };
 
   return (
     <>
@@ -87,7 +92,7 @@ const Slider = (props) => {
                             type="button"
                             className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
                             data-bs-container="body"
-                            onClick={() => addDataIntoLocalStorage(product.id)}
+                            onClick={() => AddItemIntoCart(product.id)}
                           >
                             <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
                           </button>

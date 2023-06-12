@@ -1,12 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import cartNothingImg from "../assets/cart-nothing.png";
 import { useLottie } from "lottie-react";
 import emptyAnimation from "./96758-empty-cart.json";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
+import CartContext from "../contexts/CartContext";
 
 const Cart = () => {
+  const cartContext = useContext(CartContext);
+  const {
+    setCartItemQuantity,
+    RemoveItemFromCartLocalStorage,
+    cartItemQuantity,
+    emptyCartFlag,
+    setEmptyCartFlag,
+  } = cartContext;
+
   const options = {
     animationData: emptyAnimation,
     loop: true,
@@ -21,29 +32,57 @@ const Cart = () => {
   const [totalCartPrice, setTotalCartPrice] = useState();
   const [flag, setFlag] = useState(0);
 
+  // const [emptyCartFlag, setEmptyCartFlag] = useState();
+
+  // useEffect(() => {
+  //   setEmptyCartFlag(localStorage.getItem("product_ids") ? false : true);
+  //   alert(emptyCartFlag);
+  // }, [emptyCartFlag]);
+
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
-      const ids = localStorage.getItem("product_ids").split(",");
-      try {
-        axios
-          .post("http://127.0.0.1:8000/api/product-list-by-ids/", { ids: ids })
-          .then((response) => {
-            let addition_data = response.data.results;
-            addition_data.map((item) => (item.quantity = 1));
-            setProducts(addition_data);
-          });
-      } catch (error) {
-        console.error("Error response:");
-        console.error(error.response.data); // ***
-        console.error(error.response.status); // ***
-        console.error(error.response.headers); // ***
+      if (localStorage.getItem("product_ids")) {
+        setLoading(true);
+        const ids = localStorage.getItem("product_ids").split(",");
+        try {
+          axios
+            .post("http://127.0.0.1:8000/api/product-list-by-ids/", {
+              ids: ids,
+            })
+            .then((response) => {
+              let addition_data = response.data.results;
+              addition_data.map((item) => (item.quantity = 1));
+              setProducts(addition_data);
+              setFlag((prev) => prev + 1);
+            });
+        } catch (error) {
+          console.error("Error response:");
+          console.error(error.response.data); // ***
+          console.error(error.response.status); // ***
+          console.error(error.response.headers); // ***
+        }
+        setLoading(false);
       }
-      setLoading(false);
     };
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    let total = 0;
+    products.map((item) => {
+      total += item.price * item.quantity;
+    });
+    setTotalCartPrice(total);
+  }, [flag]);
+
+  useEffect(() => {
+    let total = 0;
+    products.map((item) => {
+      total += item.price * item.quantity;
+    });
+    setTotalCartPrice(total);
+  }, [flag, products]);
 
   const SetProductQuantity = (productId, quantityValue) => {
     let data = products;
@@ -56,14 +95,14 @@ const Cart = () => {
     setFlag((prev) => prev + 1);
   };
 
-  useEffect(() => {
-    let total = 0;
-    products.map((item) => {
-      total += item.price * item.quantity;
-    });
-    setTotalCartPrice(total);
-    // alert(totalCartPrice);
-  }, [flag]);
+  const removeProductFromCart = (productId) => {
+    setProducts((products) =>
+      products.filter(function (product) {
+        return product.id !== productId;
+      })
+    );
+    RemoveItemFromCartLocalStorage(productId);
+  };
 
   const useStyle = {
     Button: {
@@ -182,8 +221,10 @@ const Cart = () => {
               Giỏ Hàng
             </h2>
           </div>
+        </div>
 
-          {localStorage.getItem("product_ids") ? (
+        <div className="row">
+          {cartItemQuantity !== 0 ? (
             <>
               <div className="row">
                 <div className="col-8 m-0 p-0 border-top border-bottom mt-4 py-2">
@@ -220,8 +261,27 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
-                  <span>Tổng: {totalCartPrice.toString()}</span>
+                {/* total cart price */}
+                <div className="col-4 mt-4">
+                  <div className="d-flex justify-content-between">
+                    <span
+                      style={{
+                        fontWeight: 400,
+                        fontSize: "14px",
+                        marginTop: 10,
+                      }}
+                      className="ms-3"
+                    >
+                      Tổng:
+                    </span>
+                    <span
+                      className="total-cart-price fs-4 fw-light"
+                      style={{ marginTop: 3.5 }}
+                    >
+                      {/* {totalCartPrice}  */}
+                      {totalCartPrice && totalCartPrice.toLocaleString()}đ
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -299,15 +359,67 @@ const Cart = () => {
                                 color: "red",
                               },
                             }}
+                            onClick={(e) => removeProductFromCart(product.id)}
                           />
                         </div>
                       </div>
                     ))}
                 </div>
+                <div className="col-4 px-3">
+                  {/* cart-button */}
+                  <div className="mt-2 d-flex justify-content-between">
+                    <Link
+                      to={"/"}
+                      type="button"
+                      className="btn btn-danger text-uppercase rounded-pill border fw-light py-2"
+                      style={{ fontSize: 13.5, width: 190 }}
+                    >
+                      Tiếp tục mua sắm
+                    </Link>
+
+                    <Link
+                      to={"/indevpage"}
+                      type="button"
+                      className="btn text-uppercase rounded-pill border fw-light py-2 border border-danger text-danger"
+                      style={{ fontSize: 13.5, width: 190 }}
+                    >
+                      Thanh toán
+                    </Link>
+                  </div>
+                  {/* order notes */}
+                  <div className="mt-5">
+                    <label
+                      for="orderNoteFormControlTextarea1"
+                      class="form-label"
+                      style={{
+                        fontWeight: 400,
+                        fontSize: "14px",
+                      }}
+                      className="ms-1"
+                    >
+                      Chú Thích:
+                    </label>
+                    <textarea
+                      class="form-control"
+                      id="orderNoteFormControlTextarea1"
+                      placeholder="Bạn muốn mô tả rõ hơn về đơn hàng này..."
+                      rows="3"
+                      style={{
+                        fontWeight: 400,
+                        fontSize: "14px",
+                      }}
+                    ></textarea>
+                  </div>
+                </div>
               </div>
             </>
           ) : (
-            <>{View}</>
+            // Show anmation if the cart is empty
+            <>
+              <div className="col-3"></div>
+              <div className="col-6">{View}</div>
+              <div className="col-3"></div>
+            </>
           )}
         </div>
       </div>

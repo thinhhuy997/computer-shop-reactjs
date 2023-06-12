@@ -10,7 +10,7 @@ const HeaderPage = () => {
   const [products, setProducts] = useState([]);
   const [productCount, setProductCount] = useState(0);
 
-  let { cartInfo, setCartInfo } = useContext(CartContext);
+  let { cartItemQuantity, setCartItemQuantity } = useContext(CartContext);
 
   let navigate = useNavigate();
 
@@ -30,6 +30,19 @@ const HeaderPage = () => {
       setProductCount(0);
     }
   }, [searchParam]);
+
+  useEffect(() => {
+    if (!localStorage.getItem("product_ids")) {
+      setCartItemQuantity(0);
+    }
+  }, [cartItemQuantity]);
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("product_ids") !== null) {
+  //     let product_ids = localStorage.getItem("product_ids").split(",");
+
+  //   }
+  // });
 
   // const handleSearchOnchange = (searchParam) => {
   //   setSearchParam(searchParam);
@@ -173,20 +186,8 @@ const HeaderPage = () => {
               className="text-decoration-none text-dark d-flex align-items-center ms-4 cart-icon--wrapper"
             >
               <i className="cib-shopify position-relative cart-icon">
-                <span
-                  className="position-absolute rounded-circle bg-danger text-white fw-bold cart-icon--quantity"
-                  // style={{
-                  //   fontSize: "12px",
-                  //   width: "18px",
-                  //   height: "18px",
-                  //   padding: "0 5px",
-                  //   top: 28,
-                  //   left: 25,
-                  //   textAlign: "center",
-                  //   lineHeight: "15px",
-                  // }}
-                >
-                  {cartInfo.quantity}
+                <span className="position-absolute rounded-circle bg-danger text-white fw-bold cart-icon--quantity">
+                  {cartItemQuantity}
                 </span>
               </i>
               <span
@@ -327,7 +328,7 @@ const HeaderPage = () => {
           >
             <i className="cib-shopify position-relative cart-icon">
               <span className="position-absolute rounded-circle bg-danger text-white fw-bold cart-icon--quantity">
-                {cartInfo.quantity}
+                {cartItemQuantity}
               </span>
             </i>
           </Link>

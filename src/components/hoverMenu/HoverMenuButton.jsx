@@ -6,7 +6,7 @@ const HoverMenuButton = (props) => {
   const categoryName = props.categoryName;
   const textDanger = props.textDanger;
   const navigationContent = props.navigationContent;
-  console.log(navigationContent);
+  // console.log(navigationContent);
   return (
     <>
       <li className="d-flex navigation w-100" style={{ zIndex: "100" }}>

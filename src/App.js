@@ -9,6 +9,7 @@ import Cart from './pages/Cart';
 import Search from './pages/Search';
 import { CartProvider } from './contexts/CartContext';
 import {AuthProvider} from './contexts/AuthContext';
+import { InDevelopmentPage } from './pages/InDevelopmentPage';
 function App() {
 
   // Function to add our give data into cache
@@ -31,6 +32,7 @@ function App() {
         <CartProvider>
           <HeaderPage/>
           <Routes>
+              {/* <HeaderPage/> */}
               <Route index element={<Home/>} />
               <Route path="login-signup" element={<LoginAndSignup />} />
               <Route path="collections/:categoryName" element={<Collection />} >
@@ -39,7 +41,8 @@ function App() {
               </Route>
               <Route path="product/:slug" element={<ProductDetail />} />
               <Route path="cart" element={<Cart />} />
-              {/* <Route path="*" element={<NoPage />} /> */}
+              {/* test */}
+              <Route path="*" element={<InDevelopmentPage />} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
