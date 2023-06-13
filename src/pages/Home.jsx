@@ -87,6 +87,7 @@ const laptop_products = [
 
 const Home = () => {
   const [vgaProducts, setVgaProducts] = useState([]);
+  const [monitorProducts, setMonitorProducts] = useState([]);
 
   useEffect(() => {
     axios({
@@ -99,13 +100,16 @@ const Home = () => {
       .catch((e) => console.dir(e));
   }, []);
 
-  // useEffect(() => {
-  //   localStorage.removeItem("product_ids");
-  //   localStorage.setItem("product_ids", []);
-  //   if (localStorage.getItem("product_ids").length == 0) {
-  //     localStorage.removeItem("product_ids");
-  //   }
-  // }, []);
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: `http://127.0.0.1:8000/api/product-list-create/?categories=monitor&limit=10`,
+    })
+      .then((res) => {
+        setMonitorProducts(res.data.results);
+      })
+      .catch((e) => console.dir(e));
+  }, []);
 
   return (
     <>
@@ -120,8 +124,8 @@ const Home = () => {
       />
       {/* Showing product - pc gaming */}
       <ShowingProduct
-        headingBarName="PC gaming"
-        items={laptop_products}
+        headingBarName="Màn hình"
+        items={monitorProducts}
         idControl="sliderControl-pcgaming-showing-product-1"
       />
       {/* Showing product - laptop */}

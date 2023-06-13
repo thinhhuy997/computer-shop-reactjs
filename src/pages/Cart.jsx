@@ -34,11 +34,6 @@ const Cart = () => {
 
   // const [emptyCartFlag, setEmptyCartFlag] = useState();
 
-  // useEffect(() => {
-  //   setEmptyCartFlag(localStorage.getItem("product_ids") ? false : true);
-  //   alert(emptyCartFlag);
-  // }, [emptyCartFlag]);
-
   useEffect(() => {
     const fetchData = async () => {
       if (localStorage.getItem("product_ids")) {
@@ -54,6 +49,12 @@ const Cart = () => {
               addition_data.map((item) => (item.quantity = 1));
               setProducts(addition_data);
               setFlag((prev) => prev + 1);
+
+              // new
+              let quantity = localStorage
+                .getItem("product_ids")
+                .split(",").length;
+              setCartItemQuantity(quantity);
             });
         } catch (error) {
           console.error("Error response:");
@@ -67,6 +68,10 @@ const Cart = () => {
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    console.log(products);
+  }, [products]);
 
   useEffect(() => {
     let total = 0;
@@ -415,10 +420,15 @@ const Cart = () => {
             </>
           ) : (
             // Show anmation if the cart is empty
+
             <>
-              <div className="col-3"></div>
-              <div className="col-6">{View}</div>
-              <div className="col-3"></div>
+              {loading && (
+                <>
+                  <div className="col-3"></div>
+                  <div className="col-6">{View}</div>
+                  <div className="col-3"></div>
+                </>
+              )}
             </>
           )}
         </div>

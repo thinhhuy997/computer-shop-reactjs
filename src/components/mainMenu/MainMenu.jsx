@@ -1,5 +1,6 @@
 import React from "react";
 import "./mainMenu.css";
+import { Link } from "react-router-dom";
 const MainMenu = () => {
   return (
     <div className="bg-danger">
@@ -8,67 +9,67 @@ const MainMenu = () => {
           <div className="col-md-12 d-flex align-items-center">
             <ul className="menu list-unstyled list-inline d-flex align-items-center m-0 p-0">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase ms-5 ps-5"
                   //   style={{ w }}
                 >
                   lắp đặt phòng net
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase"
                   //   style={{ w }}
                 >
                   Trả Góp
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase"
                   //   style={{ w }}
                 >
                   bảng giá
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase"
                   //   style={{ w }}
                 >
                   Xây dựng cấu hình
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase"
                   //   style={{ w }}
                 >
                   Kiểm tra bảo hành
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase"
                   //   style={{ w }}
                 >
                   Thiết bị mining
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to={"/in-dev-stage"}
                   className="text-white text-decoration-none fw-bold text-uppercase"
                   //   style={{ w }}
                 >
                   Dịch vụ tận nơi
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

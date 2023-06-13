@@ -16,7 +16,11 @@ const MainLS = () => {
                 style={{ maxWidth: "110px", maxHeight: "30px" }}
                 className="me-2"
               >
-                <a href="#" className="m-0 text-decoration-none text-white">
+                {/* login by facebook */}
+                <Link
+                  to={"/login-by-facebook"}
+                  className="m-0 text-decoration-none text-white"
+                >
                   {/* facebook */}
 
                   <div className="d-flex align-items-center bg-primary rounded-pill px-2">
@@ -29,14 +33,18 @@ const MainLS = () => {
                     </span>
                   </div>
 
-                  {/* google */}
-                </a>
+                  {/* facebook */}
+                </Link>
               </div>
               <div
                 style={{ maxWidth: "110px", maxHeight: "30px" }}
                 className="me-2"
               >
-                <a href="#" className="m-0 text-decoration-none text-white">
+                {/* login by google */}
+                <Link
+                  to={"/login-by-google"}
+                  className="m-0 text-decoration-none text-white"
+                >
                   {/* google */}
 
                   <div className="d-flex align-items-center bg-danger rounded-pill px-2">
@@ -50,7 +58,7 @@ const MainLS = () => {
                   </div>
 
                   {/* google */}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -109,19 +117,23 @@ const MainLS = () => {
                 style={{ fontSize: "14px" }}
               />
             </div>
-            <button
+            <Link
+              to={"login"}
               type="submit"
               className="bg-white border-1 w-100 mt-4 py-1 btn-login"
               style={{ fontSize: "14px", fontWeight: 400 }}
             >
               Đăng nhập
-            </button>
+            </Link>
             {/* forgot account */}
-            <div className="mt-3">
-              <Link to={"#"} className="text-dark" style={{ fontSize: "14px" }}>
-                Quên mật khẩu?
-              </Link>
-            </div>
+            <Link
+              to={"/pw-forgot"}
+              type="submit"
+              className="bg-white border-1 w-100 mt-4 py-1 btn-login"
+              style={{ fontSize: "14px", fontWeight: 400 }}
+            >
+              Quên mật khẩu?
+            </Link>
           </form>
         </div>
         <div className="col-sm-12 col-md-6">
@@ -221,13 +233,14 @@ const MainLS = () => {
                 style={{ fontSize: "14px" }}
               />
             </div>
-            <button
+            <Link
+              to={"/sign-up"}
               type="submit"
               className="bg-white border-1 w-100 mt-4 py-1 btn-login"
               style={{ fontSize: "14px", fontWeight: 400 }}
             >
               Đăng ký
-            </button>
+            </Link>
           </form>
         </div>
       </div>
