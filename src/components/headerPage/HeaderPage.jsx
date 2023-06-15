@@ -34,6 +34,9 @@ const HeaderPage = () => {
   useEffect(() => {
     if (!localStorage.getItem("product_ids")) {
       setCartItemQuantity(0);
+    } else {
+      let quantity = localStorage.getItem("product_ids").split(",").length;
+      setCartItemQuantity(quantity);
     }
   }, [cartItemQuantity]);
 

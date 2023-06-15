@@ -422,6 +422,7 @@ const Cart = () => {
             // Show anmation if the cart is empty
 
             <>
+            {/* if api is loading not show empty-cart-animation */}
               {loading && (
                 <>
                   <div className="col-3"></div>

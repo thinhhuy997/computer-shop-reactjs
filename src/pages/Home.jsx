@@ -88,11 +88,12 @@ const laptop_products = [
 const Home = () => {
   const [vgaProducts, setVgaProducts] = useState([]);
   const [monitorProducts, setMonitorProducts] = useState([]);
+  const [officeLaptops, setOfficeLaptops] = useState([]);
 
   useEffect(() => {
     axios({
       method: "GET",
-      url: `http://127.0.0.1:8000/api/product-list-create/?categories=vga&limit=10`,
+      url: `http://127.0.0.1:8000/api/product-list-create/?categories=graphic-card&limit=10`,
     })
       .then((res) => {
         setVgaProducts(res.data.results);
