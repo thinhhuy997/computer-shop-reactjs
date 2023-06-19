@@ -18,6 +18,8 @@ const Cart = () => {
     setEmptyCartFlag,
   } = cartContext;
 
+  const navigate = useNavigate();
+
   const options = {
     animationData: emptyAnimation,
     loop: true,
@@ -31,6 +33,10 @@ const Cart = () => {
   const [products, setProducts] = useState([]);
   const [totalCartPrice, setTotalCartPrice] = useState();
   const [flag, setFlag] = useState(0);
+
+  const handleNavigateToProductDetailPath = (slug) => {
+    navigate(`/product/${slug}`);
+  };
 
   // const [emptyCartFlag, setEmptyCartFlag] = useState();
 
@@ -125,7 +131,7 @@ const Cart = () => {
   return (
     <>
       <div className="container">
-        <div className="row">
+        <div className="row d-none d-xl-flex">
           <div className="col-2 d-flex justify-content-end px-0">
             <div
               className="text-center py-1 text-white d-flex justify-content-center align-items-center rounded"
@@ -231,43 +237,396 @@ const Cart = () => {
         <div className="row">
           {cartItemQuantity !== 0 ? (
             <>
+              {/* cart row */}
               <div className="row">
-                <div className="col-8 m-0 p-0 border-top border-bottom mt-4 py-2">
-                  <div className="row">
-                    <div className="col-2 text-center">
+                <div className="col-xl-8 col-lg-12">
+                  <div className="row border-top border-bottom p-0 mt-4 py-2">
+                    <div className="col-2 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Sản Phẩm
                       </span>
                     </div>
-                    <div className="col-3 text-center">
+                    <div className="col-3 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Mô Tả
                       </span>
                     </div>
-                    <div className="col-2 text-center">
+                    <div className="col-2 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Giá
                       </span>
                     </div>
-                    <div className="col-2 text-center">
+                    <div className="col-2 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Số Lượng
                       </span>
                     </div>
-                    <div className="col-2 text-center">
+                    <div className="col-2 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Tổng
                       </span>
                     </div>
-                    <div className="col-1 text-center">
+                    <div className="col-1 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Xoá
                       </span>
                     </div>
                   </div>
+                  <div className="my-2"></div>
+                  {/* <div className="row border mt-3"> */}
+                  {products &&
+                    products.map((product) => (
+                      <>
+                        {/* LG-SCREEN DESIGN */}
+                        <div className="row border-bottom pt-2 d-none d-lg-flex">
+                          {/* product thumbnail img */}
+                          <div className="col-lg-2 text-center">
+                            <div
+                              className="product-thumbnail py-3"
+                              style={{ zIndex: -1 }}
+                            >
+                              <Link
+                                className="pt-4"
+                                to={`/product/${product.slug}`}
+                              >
+                                <img
+                                  src={
+                                    product.image_urls && product.image_urls[0]
+                                  }
+                                  alt="product thumbnail"
+                                  style={{
+                                    width: "120px",
+                                    height: "auto",
+                                    zIndex: 1,
+                                  }}
+                                />
+                              </Link>
+                            </div>
+                          </div>
+                          {/* product description */}
+                          <div className="col-md-8 col-lg-3 text-left">
+                            <Link to={`/product/${product.slug}`}>
+                              <span
+                                style={{ fontWeight: 400, fontSize: "14px" }}
+                              >
+                                {product.name}
+                              </span>
+                            </Link>
+                          </div>
+
+                          {/* product price */}
+                          <div className="col-lg-2 text-center">
+                            <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                              {product.price.toLocaleString("en-US")} đ
+                            </span>
+                          </div>
+                          {/* product quantity */}
+                          <div className="col-lg-2">
+                            <div class="form-outline  w-50 mx-auto">
+                              <input
+                                min="1"
+                                max="20"
+                                defaultValue={product.quantity}
+                                // value={product.quantity.toString()}
+                                // value="5"
+                                type="number"
+                                id="typeNumber"
+                                className="form-control text-center"
+                                onChange={(e) =>
+                                  SetProductQuantity(product.id, e.target.value)
+                                }
+                                style={{ fontSize: 13.5 }}
+                              />
+                            </div>
+                          </div>
+                          {/* item total price */}
+                          <div className="col-lg-2 text-center">
+                            <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                              {(
+                                product.price * product.quantity
+                              ).toLocaleString("en-US")}{" "}
+                              đ
+                            </span>
+                          </div>
+                          {/* item remove */}
+                          <div className="col-lg-1 text-center">
+                            <RemoveCircleOutlineIcon
+                              variant="text"
+                              sx={{
+                                ":hover": {
+                                  color: "red",
+                                },
+                              }}
+                              onClick={(e) => removeProductFromCart(product.id)}
+                            />
+                          </div>
+                        </div>
+
+                        {/* MD-SCREEN DESIGN */}
+                        <div className="row border-bottom mt-4 pt-2 d-none d-md-flex d-lg-none">
+                          {/* product thumbnail img */}
+                          <div className="col-4">
+                            <div
+                              className="product-thumbnail py-3"
+                              style={{ zIndex: -1 }}
+                            >
+                              <Link
+                                className="pt-4"
+                                to={`/product/${product.slug}`}
+                              >
+                                <img
+                                  src={
+                                    product.image_urls && product.image_urls[0]
+                                  }
+                                  alt="product thumbnail"
+                                  style={{
+                                    width: "120px",
+                                    height: "auto",
+                                    zIndex: 1,
+                                  }}
+                                />
+                              </Link>
+                            </div>
+                          </div>
+                          {/* product description */}
+                          <div className="col-8 text-left">
+                            <div className="col-12">
+                              <Link to={`/product/${product.slug}`}>
+                                <span
+                                  style={{ fontWeight: 400, fontSize: "14px" }}
+                                >
+                                  {product.name}
+                                </span>
+                              </Link>
+                            </div>
+                            <div className="col-12 mt-2">
+                              <span
+                                style={{ fontWeight: 400, fontSize: "14px" }}
+                              >
+                                {product.price.toLocaleString("en-US")} đ
+                              </span>
+                            </div>
+                            <div className="row mt-2">
+                              <div className="col-8">
+                                <div class="form-outline  w-25">
+                                  <input
+                                    min="1"
+                                    max="20"
+                                    defaultValue={product.quantity}
+                                    // value={product.quantity.toString()}
+                                    // value="5"
+                                    type="number"
+                                    id="typeNumber"
+                                    className="form-control text-center"
+                                    onChange={(e) =>
+                                      SetProductQuantity(
+                                        product.id,
+                                        e.target.value
+                                      )
+                                    }
+                                    style={{ fontSize: 13.5 }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-4 mt-2">
+                                <RemoveCircleOutlineIcon
+                                  variant="text"
+                                  sx={{
+                                    ":hover": {
+                                      color: "red",
+                                    },
+                                  }}
+                                  onClick={(e) =>
+                                    removeProductFromCart(product.id)
+                                  }
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* product price */}
+                          {/* <div className="col-12 text-left">
+                            <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                              {product.price.toLocaleString("en-US")} đ
+                            </span>
+                          </div> */}
+                          {/* product quantity */}
+                          {/* <div className="col-lg-2">
+                            <div class="form-outline  w-50 mx-auto">
+                              <input
+                                min="1"
+                                max="20"
+                                defaultValue={product.quantity}
+                                // value={product.quantity.toString()}
+                                // value="5"
+                                type="number"
+                                id="typeNumber"
+                                className="form-control text-center"
+                                onChange={(e) =>
+                                  SetProductQuantity(product.id, e.target.value)
+                                }
+                                style={{ fontSize: 13.5 }}
+                              />
+                            </div>
+                          </div> */}
+                          {/* item total price */}
+                          {/* <div className="col-lg-2 text-center">
+                            <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                              {(
+                                product.price * product.quantity
+                              ).toLocaleString("en-US")}{" "}
+                              đ
+                            </span>
+                          </div> */}
+                          {/* item remove */}
+                          {/* <div className="col-lg-1 text-center">
+                            <RemoveCircleOutlineIcon
+                              variant="text"
+                              sx={{
+                                ":hover": {
+                                  color: "red",
+                                },
+                              }}
+                              onClick={(e) => removeProductFromCart(product.id)}
+                            />
+                          </div> */}
+                        </div>
+
+                        {/* MD-SCREEN DESIGN */}
+                        <div className="row border-bottom mt-4 pt-2 d-sm-block d-md-none">
+                          {/* product thumbnail img */}
+                          <div className="col-4">
+                            <div
+                              className="product-thumbnail py-3"
+                              style={{ zIndex: -1 }}
+                            >
+                              <Link
+                                className="pt-4"
+                                to={`/product/${product.slug}`}
+                              >
+                                <img
+                                  src={
+                                    product.image_urls && product.image_urls[0]
+                                  }
+                                  alt="product thumbnail"
+                                  style={{
+                                    width: "120px",
+                                    height: "auto",
+                                    zIndex: 1,
+                                  }}
+                                />
+                              </Link>
+                            </div>
+                          </div>
+                          {/* product description */}
+                          <div className="col-8 text-left">
+                            <div className="col-12">
+                              <Link to={`/product/${product.slug}`}>
+                                <span
+                                  style={{ fontWeight: 400, fontSize: "14px" }}
+                                >
+                                  {product.name}
+                                </span>
+                              </Link>
+                            </div>
+                            <div className="col-12 mt-2">
+                              <span
+                                style={{ fontWeight: 400, fontSize: "14px" }}
+                              >
+                                {product.price.toLocaleString("en-US")} đ
+                              </span>
+                            </div>
+                            <div className="row mt-2">
+                              <div className="col-8">
+                                <div class="form-outline  w-25">
+                                  <input
+                                    min="1"
+                                    max="20"
+                                    defaultValue={product.quantity}
+                                    // value={product.quantity.toString()}
+                                    // value="5"
+                                    type="number"
+                                    id="typeNumber"
+                                    className="form-control text-center"
+                                    onChange={(e) =>
+                                      SetProductQuantity(
+                                        product.id,
+                                        e.target.value
+                                      )
+                                    }
+                                    style={{ fontSize: 13.5 }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-4 mt-2">
+                                <RemoveCircleOutlineIcon
+                                  variant="text"
+                                  sx={{
+                                    ":hover": {
+                                      color: "red",
+                                    },
+                                  }}
+                                  onClick={(e) =>
+                                    removeProductFromCart(product.id)
+                                  }
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* product price */}
+                          {/* <div className="col-12 text-left">
+                            <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                              {product.price.toLocaleString("en-US")} đ
+                            </span>
+                          </div> */}
+                          {/* product quantity */}
+                          {/* <div className="col-lg-2">
+                            <div class="form-outline  w-50 mx-auto">
+                              <input
+                                min="1"
+                                max="20"
+                                defaultValue={product.quantity}
+                                // value={product.quantity.toString()}
+                                // value="5"
+                                type="number"
+                                id="typeNumber"
+                                className="form-control text-center"
+                                onChange={(e) =>
+                                  SetProductQuantity(product.id, e.target.value)
+                                }
+                                style={{ fontSize: 13.5 }}
+                              />
+                            </div>
+                          </div> */}
+                          {/* item total price */}
+                          {/* <div className="col-lg-2 text-center">
+                            <span style={{ fontWeight: 400, fontSize: "14px" }}>
+                              {(
+                                product.price * product.quantity
+                              ).toLocaleString("en-US")}{" "}
+                              đ
+                            </span>
+                          </div> */}
+                          {/* item remove */}
+                          {/* <div className="col-lg-1 text-center">
+                            <RemoveCircleOutlineIcon
+                              variant="text"
+                              sx={{
+                                ":hover": {
+                                  color: "red",
+                                },
+                              }}
+                              onClick={(e) => removeProductFromCart(product.id)}
+                            />
+                          </div> */}
+                        </div>
+                      </>
+                    ))}
+                  {/* </div> */}
                 </div>
                 {/* total cart price */}
-                <div className="col-4 mt-4">
+                <div className="col-xl-4 col-lg-12 mt-4">
                   <div className="d-flex justify-content-between">
                     <span
                       style={{
@@ -287,133 +646,52 @@ const Cart = () => {
                       {totalCartPrice && totalCartPrice.toLocaleString()}đ
                     </span>
                   </div>
-                </div>
-              </div>
+                  {/* cart buttons */}
+                  <div>
+                    {/* cart-button */}
+                    <div className="mt-2 d-flex justify-content-between">
+                      <Link
+                        to={"/"}
+                        type="button"
+                        className="btn btn-danger text-uppercase rounded-pill border fw-light py-2"
+                        style={{ fontSize: 13.5, width: 190 }}
+                      >
+                        Tiếp tục mua sắm
+                      </Link>
 
-              <div className="row">
-                <div className="col-8 m-0 p-0 mt-4 pb-2">
-                  {products &&
-                    products.map((product) => (
-                      <div className="row border-bottom pt-2">
-                        {/* product thumbnail img */}
-                        <div className="col-2 text-center">
-                          <div
-                            className="product-thumbnail py-3"
-                            style={{ zIndex: -1 }}
-                          >
-                            <a href="#" className="pt-4">
-                              <img
-                                src={
-                                  product.image_urls && product.image_urls[0]
-                                }
-                                alt="product thumbnail"
-                                style={{
-                                  width: "120px",
-                                  height: "auto",
-                                  zIndex: 1,
-                                }}
-                              />
-                            </a>
-                          </div>
-                        </div>
-                        {/* product description */}
-                        <div className="col-3 text-left">
-                          <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                            {product.name}
-                          </span>
-                        </div>
-                        {/* product price */}
-                        <div className="col-2 text-center">
-                          <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                            {product.price.toLocaleString("en-US")} đ
-                          </span>
-                        </div>
-                        {/* product quantity */}
-                        <div className="col-2">
-                          <div class="form-outline  w-50 mx-auto">
-                            <input
-                              min="1"
-                              max="20"
-                              defaultValue={product.quantity}
-                              // value={product.quantity.toString()}
-                              // value="5"
-                              type="number"
-                              id="typeNumber"
-                              className="form-control text-center"
-                              onChange={(e) =>
-                                SetProductQuantity(product.id, e.target.value)
-                              }
-                              style={{ fontSize: 13.5 }}
-                            />
-                          </div>
-                        </div>
-                        {/* item total price */}
-                        <div className="col-2 text-center">
-                          <span style={{ fontWeight: 400, fontSize: "14px" }}>
-                            {(product.price * product.quantity).toLocaleString(
-                              "en-US"
-                            )}{" "}
-                            đ
-                          </span>
-                        </div>
-                        <div className="col-1 text-center">
-                          <RemoveCircleOutlineIcon
-                            variant="text"
-                            sx={{
-                              ":hover": {
-                                color: "red",
-                              },
-                            }}
-                            onClick={(e) => removeProductFromCart(product.id)}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                </div>
-                <div className="col-4 px-3">
-                  {/* cart-button */}
-                  <div className="mt-2 d-flex justify-content-between">
-                    <Link
-                      to={"/"}
-                      type="button"
-                      className="btn btn-danger text-uppercase rounded-pill border fw-light py-2"
-                      style={{ fontSize: 13.5, width: 190 }}
-                    >
-                      Tiếp tục mua sắm
-                    </Link>
-
-                    <Link
-                      to={"/indevpage"}
-                      type="button"
-                      className="btn text-uppercase rounded-pill border fw-light py-2 border border-danger text-danger"
-                      style={{ fontSize: 13.5, width: 190 }}
-                    >
-                      Thanh toán
-                    </Link>
-                  </div>
-                  {/* order notes */}
-                  <div className="mt-5">
-                    <label
-                      for="orderNoteFormControlTextarea1"
-                      class="form-label"
-                      style={{
-                        fontWeight: 400,
-                        fontSize: "14px",
-                      }}
-                      className="ms-1"
-                    >
-                      Chú Thích:
-                    </label>
-                    <textarea
-                      class="form-control"
-                      id="orderNoteFormControlTextarea1"
-                      placeholder="Bạn muốn mô tả rõ hơn về đơn hàng này..."
-                      rows="3"
-                      style={{
-                        fontWeight: 400,
-                        fontSize: "14px",
-                      }}
-                    ></textarea>
+                      <Link
+                        to={"/indevpage"}
+                        type="button"
+                        className="btn text-uppercase rounded-pill border fw-light py-2 border border-danger text-danger"
+                        style={{ fontSize: 13.5, width: 190 }}
+                      >
+                        Thanh toán
+                      </Link>
+                    </div>
+                    {/* order notes */}
+                    <div className="mt-5">
+                      <label
+                        for="orderNoteFormControlTextarea1"
+                        class="form-label"
+                        style={{
+                          fontWeight: 400,
+                          fontSize: "14px",
+                        }}
+                        className="ms-1"
+                      >
+                        Chú Thích:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="orderNoteFormControlTextarea1"
+                        placeholder="Bạn muốn mô tả rõ hơn về đơn hàng này..."
+                        rows="3"
+                        style={{
+                          fontWeight: 400,
+                          fontSize: "14px",
+                        }}
+                      ></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -422,7 +700,7 @@ const Cart = () => {
             // Show anmation if the cart is empty
 
             <>
-            {/* if api is loading not show empty-cart-animation */}
+              {/* if api is loading not show empty-cart-animation */}
               {loading && (
                 <>
                   <div className="col-3"></div>

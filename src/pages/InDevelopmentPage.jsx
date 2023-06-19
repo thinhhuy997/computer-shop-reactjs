@@ -1,5 +1,6 @@
 import React from "react";
 import "./inDevelopmentPage.css";
+import { Link } from "react-router-dom";
 export const InDevelopmentPage = () => {
   return (
     <a href="https://codepen.io/uiswarup/full/yLzypyY" target="_blank">
@@ -31,14 +32,13 @@ export const InDevelopmentPage = () => {
           <div class="error__message message">
             <h1 class="message__title">Chức năng này đang phát triển thêm</h1>
             <p class="message__text">
-              We're sorry, the page you were looking for isn't found here. The
-              link you followed may either be broken or no longer exists. Please
-              try again, or take a look at our.
+              Chức năng này của Website đang được phát triển thêm, hẹn gặp lại
+              trong tương lai!
             </p>
           </div>
-          <div class="error__nav e-nav">
-            <a href="" target="_blanck" class="e-nav__link"></a>
-          </div>
+          {/* <div class="error__nav e-nav">
+            <Link href="" target="_blanck" class="e-nav__link"></Link>
+          </div> */}
         </div>
         {/* <!-- END Content --> */}
       </section>
