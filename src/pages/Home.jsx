@@ -6,7 +6,7 @@ import IntroductorySection from "../components/introductorySection/IntroductoryS
 import BestSeller from "../components/bestSeller/BestSeller";
 import ShowingProduct from "../components/showingProduct/ShowingProduct";
 import Footer from "../components/footer/Footer";
-import NavigationBar from "../components/navigationBar/NavigationBar";
+import NavigationBarHome from "../components/navigationBarHome/NavigationBarHome";
 
 import CartContext from "../contexts/CartContext";
 
@@ -114,7 +114,7 @@ const Home = () => {
 
   return (
     <>
-      <NavigationBar />
+      <NavigationBarHome />
       <IntroductorySection />
       {/* <BestSeller /> */}
       {/* Showing product - vga */}

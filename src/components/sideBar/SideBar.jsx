@@ -1,9 +1,9 @@
 import React from "react";
-import "./navigationBar.css";
 import HoverMenuButton from "../hoverMenu/HoverMenuButton";
 import { Link } from "react-router-dom";
+import "./sideBar.css";
 
-const NavigationBar = () => {
+const SideBar = () => {
   const navigationContent1 = (
     <div className="navigation-content shadow border">
       {/* <!-- Footer --> */}
@@ -1139,257 +1139,155 @@ const NavigationBar = () => {
   );
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12 d-none d-md-flex justify-content-start px-0 category position-relative border">
-          {/* category header */}
-          <div
-            className="text-center py-1 text-white d-flex justify-content-center align-items-center rounded category-header position-relative"
-            style={{
-              minWidth: "270px",
-              minHeight: "35px",
-              backgroundColor: "#505050",
-            }}
-          >
-            {/* icon */}
-            <i
-              className="fa-solid fa-bars me-2"
-              style={{ fontSize: "16px" }}
-            ></i>
-            {/* text */}
-            <span
-              className="text-uppercase fw-bold"
-              style={{ fontSize: "14px" }}
-            >
-              Danh mục sản phẩm
-            </span>
+    <div style={{ backgroundColor: "#f4f8fa" }}>
+      {/* test */}
+      <h2>Display an Element on Hover</h2>
+      <div class="container1">Click here to display element.</div>
+      {/* end of test */}
 
-            {/* sidebar */}
-            <div className="row change position-absolute start-0">
-              <div className="container">
-                <div className="row">
-                  {/* desktop */}
-                  <div className="col-12 p-0 d-none d-md-flex">
-                    {/* SIDE BAR */}
-                    <div
-                      className="d-none d-xl-flex flex-column align-items-start p-0 border-top border-start border-end border-1 bg-white rounded pt-2 navigation--wrapper"
-                      style={{ height: "100%", minWidth: "270px" }}
-                    >
-                      <HoverMenuButton
-                        categoryName="Linh kiện mới"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_1.png?v=4006"
-                        navigationContent={navigationContent1}
-                      />
-                      <HoverMenuButton
-                        categoryName="Linh kiện cũ"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_1.png?v=4006"
-                        navigationContent={navigationContent2}
-                      />
-                      <HoverMenuButton
-                        categoryName="Laptop chính hãng"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_3.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="PC gaming, Đồ hoạ, Audio"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_4.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="PC Văn Phòng, Mini PC, AiO"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_5.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Màn Hình Máy Tính"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_6.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="SSD, HDD, Thiết Bị Lưu Trữ"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_7.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Bàn, Ghế Gaming"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_8.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Phím, Chuột, Tai Nghe"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_9.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Phụ kiện chung"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_10.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Thiết bị âm thanh"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_11.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Phụ kiện và phần mềm"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_12.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Camera, Thiết Bị Quan Sát"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_13.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Máy In"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_14.png?v=4065"
-                      />
-                      <HoverMenuButton
-                        categoryName="Tản Nhiệt PC"
-                        imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_15.png?v=4065"
-                      />
-                    </div>
-                    {/* CAROUSEL AND AD IMAGES*/}
-                  </div>
-                  {/* mobile */}
-                  <div className="col-12 d-sm-block d-md-none">
-                    {/* mobile carousel*/}
-                    <div className="introductory-wrapper introductory-ad-carousel">
-                      <div className="main-introductory-ads">
-                        {/* carousel */}
-                        <div
-                          id="introductoryCarouselMobile"
-                          className="carousel slide carousel-fade d-flex"
-                          data-bs-ride="carousel"
-                        >
-                          <div className="carousel-inner introductory-carousel-mobile">
-                            <div className="carousel-item active">
-                              <img
-                                src="https://file.hstatic.net/200000420363/file/slider_1_image_fc5568fef7374019986e1a38ac82ad26.jpg"
-                                className="d-block introductory-carousel-img w-100"
-                                alt="..."
-                                // style={{ objectFit: "cover" }}
-                              />
-                            </div>
-                            <div class="carousel-item">
-                              <img
-                                src="https://file.hstatic.net/200000420363/file/sli-asus_8426a9a368cb4e11b6319b4d7d2eac6e.jpg"
-                                className="d-block introductory-carousel-img w-100"
-                                alt="..."
-                                // style={{ objectFit: "cover" }}
-                              />
-                            </div>
-                            <div class="carousel-item">
-                              <img
-                                src="https://file.hstatic.net/200000420363/file/slider_3_image_a51ce838ff07489f89b71c0f13c94bf1.jpg"
-                                className="d-block introductory-carousel-img w-100"
-                                alt="..."
-                                // style={{ objectFit: "cover" }}
-                              />
-                            </div>
-                          </div>
-                          <button
-                            class="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#introductoryCarouselMobile"
-                            data-bs-slide="prev"
-                          >
-                            <span
-                              class="carousel-control-prev-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span class="visually-hidden">Previous</span>
-                          </button>
-                          <button
-                            class="carousel-control-next"
-                            type="button"
-                            data-bs-target="#introductoryCarouselMobile"
-                            data-bs-slide="next"
-                          >
-                            <span
-                              class="carousel-control-next-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span class="visually-hidden">Next</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div className="container change">
+        <div className="row">
+          {/* desktop */}
+          <div className="col-12 p-0 d-none d-md-flex">
+            {/* SIDE BAR */}
+            <div
+              className="d-none d-xl-flex flex-column align-items-start p-0 border-top border-start border-end border-1 bg-white rounded pt-2 navigation--wrapper"
+              style={{ height: "100%", minWidth: "270px" }}
+            >
+              <HoverMenuButton
+                categoryName="Linh kiện mới"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_1.png?v=4006"
+                navigationContent={navigationContent1}
+              />
+              <HoverMenuButton
+                categoryName="Linh kiện cũ"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_1.png?v=4006"
+                navigationContent={navigationContent2}
+              />
+              <HoverMenuButton
+                categoryName="Laptop chính hãng"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_3.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="PC gaming, Đồ hoạ, Audio"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_4.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="PC Văn Phòng, Mini PC, AiO"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_5.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Màn Hình Máy Tính"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_6.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="SSD, HDD, Thiết Bị Lưu Trữ"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_7.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Bàn, Ghế Gaming"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_8.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Phím, Chuột, Tai Nghe"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_9.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Phụ kiện chung"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_10.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Thiết bị âm thanh"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_11.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Phụ kiện và phần mềm"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_12.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Camera, Thiết Bị Quan Sát"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_13.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Máy In"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_14.png?v=4065"
+              />
+              <HoverMenuButton
+                categoryName="Tản Nhiệt PC"
+                imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_15.png?v=4065"
+              />
             </div>
+            {/* CAROUSEL AND AD IMAGES*/}
           </div>
-          {/* nav menus */}
-          <div className="row" style={{ width: "82%", paddingLeft: "5px" }}>
-            <div className="col-12">
-              <div
-                className="text-white d-flex align-items-center justify-content-between py-1 rounded custom-navbar"
-                style={{ backgroundColor: "#9f9f9f", minHeight: "35px" }}
-              >
-                <div className="d-flex align-items-center">
-                  {/* icon */}
-                  <i
-                    className="fa-solid fa-wrench ms-2 me-1"
-                    style={{ fontSize: "14px" }}
-                  ></i>
-                  {/* text */}
-                  <span style={{ fontSize: "13px", fontWeight: "500" }}>
-                    Lắp đặt phòng net
-                  </span>
-                </div>
-                <div className="d-flex align-items-center">
-                  {/* icon */}
-                  <i
-                    className="fa-solid fa-table-list ms-2 me-1"
-                    style={{ fontSize: "14px" }}
-                  ></i>
-                  {/* text */}
-                  <span style={{ fontSize: "13px", fontWeight: "500" }}>
-                    Trả góp
-                  </span>
-                </div>
-                <div className="d-flex align-items-center">
-                  {/* icon */}
-                  <i
-                    className="fa-solid fa-money-check-dollar ms-2 me-1"
-                    style={{ fontSize: "14px" }}
-                  ></i>
-                  {/* text */}
-                  <span style={{ fontSize: "13px", fontWeight: "500" }}>
-                    Bảng giá
-                  </span>
-                </div>
-                <div className="d-flex align-items-center">
-                  {/* icon */}
-                  <i
-                    className="fa-solid fa-sliders ms-2 me-1"
-                    style={{ fontSize: "14px" }}
-                  ></i>
-                  {/* text */}
-                  <span style={{ fontSize: "13px", fontWeight: "500" }}>
-                    Xây dựng cấu hình
-                  </span>
-                </div>
-                <div className="d-flex align-items-center">
-                  {/* icon */}
-                  <i
-                    className="fa-solid fa-shield ms-2 me-1"
-                    style={{ fontSize: "14px" }}
-                  ></i>
-                  {/* text */}
-                  <span style={{ fontSize: "13px", fontWeight: "500" }}>
-                    Kiếm tra bảo hành
-                  </span>
-                </div>
-                <div className="d-flex align-items-center me-2">
-                  {/* icon */}
-                  <i
-                    className="fa-solid fa-dollar-sign ms-2 me-1"
-                    style={{ fontSize: "14px" }}
-                  ></i>
-                  {/* text */}
-                  <span style={{ fontSize: "13px", fontWeight: "500" }}>
-                    Thiết bị mining
-                  </span>
+          {/* mobile */}
+          <div className="col-12 d-sm-block d-md-none">
+            {/* mobile carousel*/}
+            <div className="introductory-wrapper introductory-ad-carousel">
+              <div className="main-introductory-ads">
+                {/* carousel */}
+                <div
+                  id="introductoryCarouselMobile"
+                  className="carousel slide carousel-fade d-flex"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-inner introductory-carousel-mobile">
+                    <div className="carousel-item active">
+                      <img
+                        src="https://file.hstatic.net/200000420363/file/slider_1_image_fc5568fef7374019986e1a38ac82ad26.jpg"
+                        className="d-block introductory-carousel-img w-100"
+                        alt="..."
+                        // style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://file.hstatic.net/200000420363/file/sli-asus_8426a9a368cb4e11b6319b4d7d2eac6e.jpg"
+                        className="d-block introductory-carousel-img w-100"
+                        alt="..."
+                        // style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://file.hstatic.net/200000420363/file/slider_3_image_a51ce838ff07489f89b71c0f13c94bf1.jpg"
+                        className="d-block introductory-carousel-img w-100"
+                        alt="..."
+                        // style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#introductoryCarouselMobile"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#introductoryCarouselMobile"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* sidebar */}
     </div>
   );
 };
 
-export default NavigationBar;
+export default SideBar;

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import axios from "axios";
 import { thousands_separators } from "../utils";
 import CartContext from "../../contexts/CartContext";
 import "./headerPage.css";
+import AuthContext from "../../contexts/AuthContext";
 
 const HeaderPage = () => {
   const [searchParam, setSearchParam] = useState("");
@@ -11,6 +12,9 @@ const HeaderPage = () => {
   const [productCount, setProductCount] = useState(0);
 
   let { cartItemQuantity, setCartItemQuantity } = useContext(CartContext);
+
+  // user - login
+  let { user } = useContext(AuthContext);
 
   let navigate = useNavigate();
 
@@ -39,26 +43,6 @@ const HeaderPage = () => {
       setCartItemQuantity(quantity);
     }
   }, [cartItemQuantity]);
-
-  // useEffect(() => {
-  //   if (localStorage.getItem("product_ids") !== null) {
-  //     let product_ids = localStorage.getItem("product_ids").split(",");
-
-  //   }
-  // });
-
-  // const handleSearchOnchange = (searchParam) => {
-  //   setSearchParam(searchParam);
-  //   axios({
-  //     method: "GET",
-  //     url: `http://127.0.0.1:8000/api/product-list-create/?search=${searchParam}&limit=5`,
-  //   })
-  //     .then((res) => {
-  //       setProducts(res.data.results);
-  //       setProductCount(res.data.count);
-  //     })
-  //     .catch((e) => console.dir(e));
-  // };
 
   const handleNavigateToDetailProduct = (slug) => {
     navigate(`/product/${slug}}`, { replace: true });
@@ -160,28 +144,43 @@ const HeaderPage = () => {
               </ul>
             </div>
             {/* login and register */}
-            <div className="d-none d-lg-flex align-items-center ms-4">
-              <i class="fa-solid fa-user-large fs-4 me-2 text-secondary"></i>
-              <div className="" style={{ fontSize: "12px" }}>
-                <Link
-                  to="/login-signup"
-                  className="text-decoration-none text-dark fw-normal pb-5"
-                >
-                  Đăng nhập/Đăng ký
-                </Link>
-                <br />
-                <Link
-                  to="/login-signup"
-                  className="text-decoration-none text-dark fw-bold pt-5"
-                >
-                  Tài khoản
-                  <i
-                    class="fa-solid fa-chevron-down ms-1"
-                    style={{ fontSize: "10px" }}
-                  ></i>
-                </Link>
+            {user ? (
+              <>
+                <div className="d-none d-lg-flex align-items-center ms-4">
+                  <i class="fa-solid fa-user-large fs-4 me-2 text-secondary"></i>
+                  <Link
+                    to={"/account"}
+                    style={{ fontSize: "14.5px" }}
+                    className="text-secondary"
+                  >
+                    {user.username}
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <div className="d-none d-lg-flex align-items-center ms-4">
+                <i class="fa-solid fa-user-large fs-4 me-2 text-secondary"></i>
+                <div style={{ fontSize: "12px" }}>
+                  <Link
+                    to="/login-signup"
+                    className="text-decoration-none text-dark fw-normal pb-5"
+                  >
+                    Đăng nhập/Đăng ký
+                  </Link>
+                  <br />
+                  <Link
+                    to="/login-signup"
+                    className="text-decoration-none text-dark fw-bold pt-5"
+                  >
+                    Tài khoản
+                    <i
+                      class="fa-solid fa-chevron-down ms-1"
+                      style={{ fontSize: "10px" }}
+                    ></i>
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* cart */}
             <Link

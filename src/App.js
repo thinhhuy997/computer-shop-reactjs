@@ -9,7 +9,9 @@ import Cart from './pages/Cart';
 import Search from './pages/Search';
 import { CartProvider } from './contexts/CartContext';
 import {AuthProvider} from './contexts/AuthContext';
+import Account from './pages/Account';
 import { InDevelopmentPage } from './pages/InDevelopmentPage';
+import NotePage from './pages/NotePage';
 function App() {
 
   // Function to add our give data into cache
@@ -29,22 +31,26 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <CartProvider>
-          <HeaderPage/>
-          <Routes>
-              {/* <HeaderPage/> */}
-              <Route index element={<Home/>} />
-              <Route path="login-signup" element={<LoginAndSignup />} />
-              <Route path="collections/:categoryName" element={<Collection />} >
-              </Route>
-              <Route path="search/" element={<Search />} >
-              </Route>
-              <Route path="product/:slug" element={<ProductDetail />} />
-              <Route path="cart" element={<Cart />} />
-              {/* test */}
-              <Route path="*" element={<InDevelopmentPage />} />
-          </Routes>
-        </CartProvider>
+        <AuthProvider><CartProvider>
+            <HeaderPage/>
+            <Routes>
+                {/* <HeaderPage/> */}
+                <Route index element={<Home/>} />
+                <Route path="login-signup" element={<LoginAndSignup />} />
+                <Route path="collections/:categoryName" element={<Collection />} >
+                </Route>
+                <Route path="search/" element={<Search />} >
+                </Route>
+                <Route path="product/:slug" element={<ProductDetail />} />
+                <Route path="cart" element={<Cart />} />
+                <Route path="account" element={<Account />} />
+                {/* 404 not found page */}
+                <Route path="*" element={<InDevelopmentPage />} />
+                {/* testing jwt page */}
+                <Route path="note" element={<NotePage/>} />
+            </Routes>
+          </CartProvider>
+        </AuthProvider>
       </BrowserRouter>
       
     </div>

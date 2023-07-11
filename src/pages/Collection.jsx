@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderPage from "../components/headerPage/HeaderPage";
-import MainMenu from "../components/mainMenu/MainMenu";
+import NavigationBar from "../components/navigationBar/NavigationBar";
+
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import Footer from "../components/footer/Footer";
 import MainCollection from "../components/mainCollection/MainCollection";
@@ -8,8 +8,7 @@ import MainCollection from "../components/mainCollection/MainCollection";
 const Collection = () => {
   return (
     <>
-      {/* <HeaderPage /> */}
-      <MainMenu />
+      <NavigationBar />
       <Breadcrumb breadcrumbContents={[""]} />
       <MainCollection />
       <Footer />
