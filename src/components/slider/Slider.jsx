@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import CartContext from "../../contexts/CartContext";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 // import "./slider.css";
 const Slider = (props) => {
@@ -58,12 +59,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -77,15 +75,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3 pt-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -96,7 +91,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div className="product-price-box fw-bold">
                               <span>
                                 {product.price.toLocaleString("en-US")} đ
@@ -134,12 +129,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -152,15 +144,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3 pt-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -171,7 +160,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div className="product-price-box fw-bold">
                               <span>
                                 {product.price.toLocaleString("en-US")} đ
@@ -253,12 +242,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -271,15 +257,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -290,7 +273,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div className="product-price-box fw-bold">
                               <span>
                                 {product.price.toLocaleString("en-US")} đ
@@ -328,12 +311,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -346,15 +326,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -365,7 +342,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div className="product-price-box fw-bold">
                               <span>
                                 {product.price.toLocaleString("en-US")} đ
@@ -446,12 +423,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -464,15 +438,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -483,7 +454,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div className="product-price-box fw-bold">
                               <span>
                                 {product.price.toLocaleString("en-US")} đ
@@ -520,12 +491,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -538,15 +506,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -557,7 +522,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div className="product-price-box fw-bold">
                               <span>
                                 {product.price.toLocaleString("en-US")} đ
@@ -640,12 +605,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -658,15 +620,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -677,7 +636,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div
                               className="product-price-box fw-bold"
                               style={{ fontSize: "8.5px" }}
@@ -720,12 +679,9 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="pt-4"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <img
                                 src={
@@ -738,15 +694,12 @@ const Slider = (props) => {
                                   zIndex: 1,
                                 }}
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="product-details ps-4 pb-3">
-                            <a
-                              href=""
+                            <Link
+                              to={`/product/${product.slug}`}
                               className="text-decoration-none fw-normal"
-                              onClick={(e) =>
-                                handleNavigateToProductDetailPath(product.slug)
-                              }
                             >
                               <h2
                                 style={{
@@ -757,7 +710,7 @@ const Slider = (props) => {
                               >
                                 {product.name}
                               </h2>
-                            </a>
+                            </Link>
                             <div
                               className="product-price-box fw-bold"
                               style={{ fontSize: "8.5px" }}
