@@ -12,6 +12,7 @@ import {AuthProvider} from './contexts/AuthContext';
 import Account from './pages/Account';
 import { InDevelopmentPage } from './pages/InDevelopmentPage';
 import NotePage from './pages/NotePage';
+import { HashRouter } from 'react-router-dom';
 function App() {
 
   // Function to add our give data into cache
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <AuthProvider><CartProvider>
             <HeaderPage/>
             <Routes>
@@ -51,7 +52,7 @@ function App() {
             </Routes>
           </CartProvider>
         </AuthProvider>
-      </BrowserRouter>
+      </HashRouter>
       
     </div>
   );
