@@ -13,13 +13,16 @@ const Note = () => {
   }, []);
 
   let getNotes = async () => {
-    let response = await fetch("http://127.0.0.1:8000/api/notes/", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + String(authTokens.access),
-      },
-    });
+    let response = await fetch(
+      "https://computer-shop-drf.onrender.com/api/notes/",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + String(authTokens.access),
+        },
+      }
+    );
     let data = await response.json();
 
     // if the token is valid then get data

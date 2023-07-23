@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import CartContext from "../../contexts/CartContext";
+import { useNavigate } from "react-router-dom";
 // import "./slider.css";
 const Slider = (props) => {
   const screens = props.screens;
@@ -28,6 +29,12 @@ const Slider = (props) => {
     addDataIntoLocalStorage(productId);
   };
 
+  const navigate = useNavigate();
+
+  const handleNavigateToProductDetailPath = (slug) => {
+    navigate(`/product/${slug}`);
+  };
+
   return (
     <>
       {/* XL XXL SCREEN - 5 cols*/}
@@ -51,7 +58,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   // product.image_urls && product.image_urls[0]
@@ -68,8 +81,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3 pt-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -118,7 +134,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -134,8 +156,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3 pt-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -228,7 +253,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -244,8 +275,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -294,7 +328,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -310,8 +350,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -403,7 +446,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -419,8 +468,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -468,7 +520,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -484,8 +542,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -579,7 +640,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -595,8 +662,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{
@@ -650,7 +720,13 @@ const Slider = (props) => {
                             className="product-thumbnail d-flex justify-content-center"
                             style={{ zIndex: -1 }}
                           >
-                            <a href="#" className="pt-4">
+                            <a
+                              href=""
+                              className="pt-4"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
+                            >
                               <img
                                 src={
                                   product?.image_urls && product.image_urls[0]
@@ -666,8 +742,11 @@ const Slider = (props) => {
                           </div>
                           <div className="product-details ps-4 pb-3">
                             <a
-                              href="#"
+                              href=""
                               className="text-decoration-none fw-normal"
+                              onClick={(e) =>
+                                handleNavigateToProductDetailPath(product.slug)
+                              }
                             >
                               <h2
                                 style={{

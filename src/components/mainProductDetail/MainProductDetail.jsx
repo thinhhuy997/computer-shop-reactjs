@@ -242,7 +242,7 @@ const MainProductDetail = () => {
   const LoadDetailProduct = () => {
     axios({
       method: "GET",
-      url: `http://127.0.0.1:8000/api/product-detail/${slug}/`,
+      url: `https://computer-shop-drf.onrender.com/api/product-detail/${slug}/`,
     })
       .then((res) => {
         setProduct(res.data);

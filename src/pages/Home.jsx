@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import HeaderPage from "../components/headerPage/HeaderPage";
 import MainMenu from "../components/mainMenu/MainMenu";
 import IntroductorySection from "../components/introductorySection/IntroductorySection";
@@ -90,10 +91,16 @@ const Home = () => {
   const [monitorProducts, setMonitorProducts] = useState([]);
   const [officeLaptops, setOfficeLaptops] = useState([]);
 
+  let navigate = useNavigate();
+
+  const handleNavigateToProductDetailPath = (slug) => {
+    navigate(`/product/${slug}`);
+  };
+
   useEffect(() => {
     axios({
       method: "GET",
-      url: `http://127.0.0.1:8000/api/product-list-create/?categories=graphic-card&limit=10`,
+      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=graphic-card&limit=10`,
     })
       .then((res) => {
         setVgaProducts(res.data.results);
@@ -104,7 +111,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `http://127.0.0.1:8000/api/product-list-create/?categories=monitor&limit=10`,
+      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=monitor&limit=10`,
     })
       .then((res) => {
         setMonitorProducts(res.data.results);
