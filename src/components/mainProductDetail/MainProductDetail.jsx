@@ -213,31 +213,9 @@ const MainProductDetail = () => {
   const [images, setImages] = useState([]);
   const product_detail_info = product ? product.description_from_crawler : null;
 
-  // const images = [
-  //   {
-  //     original:
-  //       "https://product.hstatic.net/200000420363/product/lt_as_b1400ceae-ek4113-2_7e8b91e11c8842849e1b6c7a04950987_master.jpg",
-  //   },
-  // ];
-
   useEffect(() => {
     LoadDetailProduct();
   }, []);
-
-  // useEffect(() => {
-  //   setImages((prev) => {
-  //     return [
-  //       ...prev,
-  //       {
-  //         original: product.image_urls,
-  //       },
-  //     ];
-  //   });
-  // }, [product]);
-
-  useEffect(() => {
-    console.log(product);
-  }, [product]);
 
   const LoadDetailProduct = () => {
     axios({
