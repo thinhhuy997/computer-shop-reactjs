@@ -232,7 +232,7 @@ const MainProductDetail = () => {
         });
         setImages(img_data);
       })
-      .catch((e) => console.dir(e));
+      .catch((err) => console.log(err));
   };
 
   return (
