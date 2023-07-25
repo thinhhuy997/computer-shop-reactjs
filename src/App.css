@@ -1,6 +1,7 @@
 .App {
   text-align: left;
   font-family: "Roboto";
+  background-color: #f4f8fa;
 }
 textarea::placeholder {
   font: 14.5px "Roboto";
