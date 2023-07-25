@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
     setAuthTokens(null)
     setUser(null)
     localStorage.removeItem("authTokens")
-    navigate("/login-signup")
+    navigate("/")
   }
 
   let updateToken = async () => {

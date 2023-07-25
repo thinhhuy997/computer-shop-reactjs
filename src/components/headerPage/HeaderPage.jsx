@@ -48,6 +48,13 @@ const HeaderPage = () => {
     navigate(`/product/${slug}}`, { replace: true });
   };
 
+  function refreshPage() {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 50);
+    console.log("page to reload");
+  }
+
   return (
     <>
       {/* desktop */}
@@ -104,6 +111,7 @@ const HeaderPage = () => {
                       <Link
                         to={`product/${product.slug}`}
                         className="d-flex dropdown-item p-0 py-1"
+                        onClick={refreshPage}
                       >
                         <img
                           src={product?.image_urls[0] && product.image_urls[0]}
