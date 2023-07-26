@@ -104,6 +104,22 @@ const Home = () => {
   const [cases, setCases] = useState([]);
   const [cameras, setCameras] = useState([]);
 
+  const [vgaLoading, setVgaLoading] = useState(true);
+  const [monitorsLoading, setMonitorsLoading] = useState(true);
+  const [pcsLoading, setPcsLoading] = useState(true);
+  const [laptopsLoading, setLaptopsLoading] = useState(true);
+  const [kmpsLoading, setKmpsLoading] = useState(true);
+  const [gamingChairsLoading, setGamingChairsLoading] = useState(true);
+  const [webcamsLoading, setWebcamsLoading] = useState(true);
+  const [psusLoading, setPsusLoading] = useState(true);
+  const [hardDrivesLoading, setHardDrivesLoading] = useState(true);
+  const [intelCpusLoading, setIntelCpusLoading] = useState(true);
+  const [amdCpusLoading, setAmdCpusLoading] = useState(true);
+  const [mainboardsLoading, setMainboardsLoading] = useState(true);
+  const [ramsLoading, setRamsLoading] = useState(true);
+  const [casesLoading, setCasesLoading] = useState(true);
+  const [camerasLoading, setCamerasLoading] = useState(true);
+
   // load vgas
   useEffect(() => {
     axios({
@@ -112,6 +128,7 @@ const Home = () => {
     })
       .then((res) => {
         setVgaProducts(res.data.results);
+        setVgaLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -124,6 +141,7 @@ const Home = () => {
     })
       .then((res) => {
         setMonitorProducts(res.data.results);
+        setMonitorsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -136,6 +154,7 @@ const Home = () => {
     })
       .then((res) => {
         setPcgamings(res.data.results);
+        setPcsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -148,6 +167,7 @@ const Home = () => {
     })
       .then((res) => {
         setLaptops(res.data.results);
+        setLaptopsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -160,6 +180,7 @@ const Home = () => {
     })
       .then((res) => {
         setKmps(res.data.results);
+        setKmpsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -172,6 +193,7 @@ const Home = () => {
     })
       .then((res) => {
         setGamingChairs(res.data.results);
+        setGamingChairsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -184,6 +206,7 @@ const Home = () => {
     })
       .then((res) => {
         setWebcams(res.data.results);
+        setWebcamsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -196,6 +219,7 @@ const Home = () => {
     })
       .then((res) => {
         setPsus(res.data.results);
+        setPsusLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -208,6 +232,7 @@ const Home = () => {
     })
       .then((res) => {
         setHardDrive(res.data.results);
+        setHardDrivesLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -220,6 +245,7 @@ const Home = () => {
     })
       .then((res) => {
         setIntelCpus(res.data.results);
+        setIntelCpusLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -232,6 +258,7 @@ const Home = () => {
     })
       .then((res) => {
         setAmdCpus(res.data.results);
+        setAmdCpusLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -244,6 +271,7 @@ const Home = () => {
     })
       .then((res) => {
         setMainboards(res.data.results);
+        setMainboardsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -256,6 +284,7 @@ const Home = () => {
     })
       .then((res) => {
         setRams(res.data.results);
+        setRamsLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -268,6 +297,7 @@ const Home = () => {
     })
       .then((res) => {
         setCases(res.data.results);
+        setCasesLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -280,6 +310,7 @@ const Home = () => {
     })
       .then((res) => {
         setCameras(res.data.results);
+        setCamerasLoading(false);
       })
       .catch((e) => console.dir(e));
   }, []);
@@ -295,6 +326,7 @@ const Home = () => {
         items={vgaProducts}
         idControl="sliderControl-vga-showing-product-1"
         showAllUrl="collections/graphic-card"
+        loading={vgaLoading}
       />
 
       {/* Showing product - pc monitor */}
@@ -303,6 +335,7 @@ const Home = () => {
         items={monitorProducts}
         idControl="sliderControl-pcmonitor-showing-product-1"
         showAllUrl="collections/monitor"
+        loading={monitorsLoading}
       />
 
       {/* Showing product - pc gaming */}
@@ -311,6 +344,7 @@ const Home = () => {
         items={pcgamings}
         idControl="sliderControl-pcgaming-showing-product-1"
         showAllUrl="collections/pc-gaming"
+        loading={pcsLoading}
       />
 
       {/* Showing product - laptop */}
@@ -319,6 +353,7 @@ const Home = () => {
         items={laptops}
         idControl="sliderControl-laptop-showing-product-1"
         showAllUrl="collections/laptop-gaming"
+        loading={laptopsLoading}
       />
       {/* Showing product - keyboard, mouse, phone */}
       <ShowingProduct
@@ -326,6 +361,7 @@ const Home = () => {
         items={kmps}
         idControl="sliderControl-kmp-showing-product-1"
         showAllUrl="collections/keyboard-mouse-phone"
+        loading={kmpsLoading}
       />
       {/* Showing product - laptop */}
       <ShowingProduct
@@ -333,6 +369,7 @@ const Home = () => {
         items={gamingChairs}
         idControl="sliderControl-deskchair-showing-product-1"
         showAllUrl="collections/gaming-chair"
+        loading={gamingChairsLoading}
       />
       {/* Showing product - webcam */}
       <ShowingProduct
@@ -340,6 +377,7 @@ const Home = () => {
         items={webcams}
         idControl="sliderControl-webcam-showing-product-1"
         showAllUrl="collections/webcam"
+        loading={webcamsLoading}
       />
       {/* Showing product - psu */}
       <ShowingProduct
@@ -347,6 +385,7 @@ const Home = () => {
         items={psus}
         idControl="sliderControl-psu-showing-product-1"
         showAllUrl="collections/psu"
+        loading={psusLoading}
       />
       {/* Showing product - harddrive */}
       <ShowingProduct
@@ -354,6 +393,7 @@ const Home = () => {
         items={hardDrive}
         idControl="sliderControl-harddrive-showing-product-1"
         showAllUrl="collections/hard-drive"
+        loading={hardDrivesLoading}
       />
 
       {/* Showing product - intel cpus */}
@@ -362,6 +402,7 @@ const Home = () => {
         items={intelCpus}
         idControl="sliderControl-intel-showing-product-1"
         showAllUrl="collections/cpu-intel"
+        loading={intelCpusLoading}
       />
 
       {/* Showing product - amd cpus */}
@@ -370,6 +411,7 @@ const Home = () => {
         items={amdCpus}
         idControl="sliderControl-amd-showing-product-1"
         showAllUrl="collections/cpu-amd"
+        loading={amdCpusLoading}
       />
 
       {/* Showing product - mainboards */}
@@ -378,6 +420,7 @@ const Home = () => {
         items={mainboards}
         idControl="sliderControl-mainboards-showing-product-1"
         showAllUrl="collections/mainboard"
+        loading={mainboardsLoading}
       />
 
       {/* Showing product - rams */}
@@ -386,6 +429,7 @@ const Home = () => {
         items={rams}
         idControl="sliderControl-rams-showing-product-1"
         showAllUrl="collections/ram"
+        loading={ramsLoading}
       />
 
       {/* Showing product - case */}
@@ -394,6 +438,7 @@ const Home = () => {
         items={cases}
         idControl="sliderControl-case-showing-product-1"
         showAllUrl="collections/case"
+        loading={casesLoading}
       />
 
       {/* Showing product - amd cameras */}
@@ -402,6 +447,7 @@ const Home = () => {
         items={cameras}
         idControl="sliderControl-cameras-showing-product-1"
         showAllUrl="collections/camera"
+        loading={camerasLoading}
       />
 
       <Footer />

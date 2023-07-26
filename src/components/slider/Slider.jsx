@@ -1,15 +1,28 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import CartContext from "../../contexts/CartContext";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { DotLoader } from "react-spinners";
+import { width } from "@mui/system";
 // import "./slider.css";
 const Slider = (props) => {
   const screens = props.screens;
   const products = props.items;
   const idControl = props.idControl;
+  const loading = props.loading;
+
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  // }, []);
+
   //   products for xl xxl screen
   const xlScreenProducts_page_1 = products.slice(0, 5);
   const xlScreenProducts_page_2 = products.slice(5, 10);
+
+  const xlScreenProducts_range = [0, 0, 0, 0, 0];
   //   products for lg screen
   const lgScreenProducts_page_1 = products.slice(0, 4);
   const lgScreenProducts_page_2 = products.slice(1, 5);
@@ -30,12 +43,7 @@ const Slider = (props) => {
     addDataIntoLocalStorage(productId);
   };
 
-  const navigate = useNavigate();
-
-  const handleNavigateToProductDetailPath = (slug) => {
-    navigate(`/product/${slug}`);
-  };
-
+  // <DotLoader color="#36d7b7" />
   return (
     <>
       {/* XL XXL SCREEN - 5 cols*/}
@@ -51,72 +59,84 @@ const Slider = (props) => {
               {/* LG SCREEN - 5 cols*/}
               <div class="carousel-item container active p-0">
                 <div className="row ">
-                  {xlScreenProducts_page_1 &&
-                    xlScreenProducts_page_1.map((product) => (
-                      <div className="col">
-                        <div className="product-inner position-relative">
+                  {loading
+                    ? // <DotLoader color="#36d7b7" />
+                      xlScreenProducts_range.map((product) => (
+                        <div className="col">
                           <div
-                            className="product-thumbnail d-flex justify-content-center"
-                            style={{ zIndex: -1 }}
+                            className="d-flex align-items-center justify-content-center"
+                            style={{ width: "208px", height: "336px" }}
                           >
-                            <Link
-                              to={`/product/${product.slug}`}
-                              className="pt-4"
-                            >
-                              <img
-                                src={
-                                  // product.image_urls && product.image_urls[0]
-                                  product?.image_urls && product.image_urls[0]
-                                }
-                                alt="product thumbnail"
-                                style={{
-                                  width: "192px",
-                                  height: "auto",
-                                  zIndex: 1,
-                                }}
-                              />
-                            </Link>
-                          </div>
-                          <div className="product-details ps-4 pb-3 pt-3">
-                            <Link
-                              to={`/product/${product.slug}`}
-                              className="text-decoration-none fw-normal"
-                            >
-                              <h2
-                                style={{
-                                  fontSize: "13.5px",
-                                  fontWeight: 400,
-                                  maxWidth: "192px",
-                                }}
-                              >
-                                {product.name}
-                              </h2>
-                            </Link>
-                            <div className="product-price-box fw-bold">
-                              <span>
-                                {product.price.toLocaleString("en-US")} đ
-                              </span>
-                            </div>
-                          </div>
-                          {/* icon cart */}
-                          <button
-                            type="button"
-                            className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
-                            data-bs-container="body"
-                            onClick={() => AddItemIntoCart(product.id)}
-                          >
-                            <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
-                          </button>
-                          {/* text bubble */}
-                          <div
-                            class="speech-bubble position-absolute start-50 translate-middle"
-                            contenteditable
-                          >
-                            Thêm vào giỏ hàng
+                            <DotLoader color="#36d7b7" />
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))
+                    : xlScreenProducts_page_1 &&
+                      xlScreenProducts_page_1.map((product) => (
+                        <div className="col">
+                          <div className="product-inner position-relative">
+                            <div
+                              className="product-thumbnail d-flex justify-content-center"
+                              style={{ zIndex: -1 }}
+                            >
+                              <Link
+                                to={`/product/${product.slug}`}
+                                className="pt-4"
+                              >
+                                <img
+                                  src={
+                                    // product.image_urls && product.image_urls[0]
+                                    product?.image_urls && product.image_urls[0]
+                                  }
+                                  alt="product thumbnail"
+                                  style={{
+                                    width: "192px",
+                                    height: "auto",
+                                    zIndex: 1,
+                                  }}
+                                />
+                              </Link>
+                            </div>
+                            <div className="product-details ps-4 pb-3 pt-3">
+                              <Link
+                                to={`/product/${product.slug}`}
+                                className="text-decoration-none fw-normal"
+                              >
+                                <h2
+                                  style={{
+                                    fontSize: "13.5px",
+                                    fontWeight: 400,
+                                    maxWidth: "192px",
+                                  }}
+                                >
+                                  {product.name}
+                                </h2>
+                              </Link>
+                              <div className="product-price-box fw-bold">
+                                <span>
+                                  {product.price.toLocaleString("en-US")} đ
+                                </span>
+                              </div>
+                            </div>
+                            {/* icon cart */}
+                            <button
+                              type="button"
+                              className="cart-icon-wrapper position-absolute translate-middle mt-3 p-3 rounded-circle border-0"
+                              data-bs-container="body"
+                              onClick={() => AddItemIntoCart(product.id)}
+                            >
+                              <i className="cib-shopify product-inner--cart fs-5 position-absolute top-50 start-50 translate-middle"></i>
+                            </button>
+                            {/* text bubble */}
+                            <div
+                              class="speech-bubble position-absolute start-50 translate-middle"
+                              contenteditable
+                            >
+                              Thêm vào giỏ hàng
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                 </div>
               </div>
               <div class="carousel-item container">

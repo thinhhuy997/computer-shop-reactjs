@@ -1,5 +1,5 @@
-import { type } from "@testing-library/user-event/dist/type";
-import { createContext, useState, useEffect} from "react";
+import { createContext, useState} from "react";
+import Swal from 'sweetalert2'
 
 const CartContext = createContext()
 
@@ -11,29 +11,40 @@ export const CartProvider = ({ children }) => {
 
     const [emptyCartFlag, setEmptyCartFlag] = useState();
 
-    
+    // add product id into localstorage
     let addDataIntoLocalStorage = (data) => {
 
         if (localStorage.getItem('product_ids')) {
 
             let product_ids = localStorage.getItem('product_ids').split(",")
 
-            if (product_ids.includes(data.toString())){
-                alert('product already exists!')
-            }
-            else {
+            if (!product_ids.includes(data.toString())){
                 product_ids.push(data.toString())
                 localStorage.removeItem("product_ids");
                 localStorage.setItem("product_ids", product_ids);
 
                 let quantity = localStorage.getItem('product_ids').split(',').length
                 setCartItemQuantity(quantity)
-                alert('Them item vao cart thanh cong!')
+                
+                Swal.fire({
+                    position: 'bot-end',
+                    icon: 'success',
+                    title: 'Sản phẩm đã được thêm vào giỏ hàng.',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
         } else {
             localStorage.setItem("product_ids", data.toString());
             setCartItemQuantity(1)
-            alert('Khoi tao cart!')
+            
+            Swal.fire({
+                    position: 'bot-end',
+                    icon: 'success',
+                    title: 'Sản phẩm đã được thêm vào giỏ hàng.',
+                    showConfirmButton: false,
+                    timer: 1500
+                    })
         }
 
     };
