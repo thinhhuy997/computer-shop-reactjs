@@ -114,7 +114,9 @@ export const AuthProvider = ({ children }) => {
     >
       {/* nếu loading = true thì không được render children */}
       {/* khi loading = false tương đương với việc đã đã cập nhật access token mới thì mới cho render children*/}
-      {loading ? null : children}
+      {/* {loading ? null : children} */}
+
+      {children}
     </AuthContext.Provider>
   )
 }
