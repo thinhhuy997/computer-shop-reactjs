@@ -22,7 +22,7 @@ const Slider = (props) => {
   const xlScreenProducts_page_1 = products.slice(0, 5);
   const xlScreenProducts_page_2 = products.slice(5, 10);
 
-  const xlScreenProducts_range = [6, 8, 6, 8, 6, 8, 6, 8, 6, 8];
+  const xlScreenProducts_range = [6, 8, 6, 8, 6];
   //   products for lg screen
   const lgScreenProducts_page_1 = products.slice(0, 4);
   const lgScreenProducts_page_2 = products.slice(1, 5);
