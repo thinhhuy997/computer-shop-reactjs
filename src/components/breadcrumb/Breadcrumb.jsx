@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Breadcrumb = (props) => {
   const breadcrumbContents = props.breadcrumbContents;
   return (
-    <div style={{ backgroundColor: "#efefef" }}>
+    <div className="d-none d-sm-block" style={{ backgroundColor: "#efefef" }}>
       <div className="container">
         <div className="row">
           <div className="col d-flex align-items-center">

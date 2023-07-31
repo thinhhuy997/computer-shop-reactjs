@@ -82,7 +82,10 @@ const MainSearch = (props) => {
               className="col d-flex align-items-center justify-content-between filter-bar bg-white mt-2 mb-2"
               style={{ height: "40px" }}
             >
-              <h5 className="m-0 fw-normal" style={{ fontSize: "15px" }}>
+              <h5
+                className="m-0 fw-normal d-none d-sm-block"
+                style={{ fontSize: "15px" }}
+              >
                 Tìm thấy {productQuantity} kết quả với từ khóa "{queryParam}".
               </h5>
               <div

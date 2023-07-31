@@ -243,11 +243,25 @@ const MainProductDetail = () => {
           style={{ height: "50px" }}
         >
           {/* product name */}
-          <p className="m-0 p-0" style={{ fontSize: "16px", fontWeight: 500 }}>
+          <p
+            className="d-none d-sm-block m-0 p-0"
+            style={{ fontSize: "16px", fontWeight: 500 }}
+          >
             {product && product.name}
           </p>
+
+          {/* product name mobile*/}
+          <div className="mt-5">
+            <p
+              className="d-block d-sm-none m-0 p-0"
+              style={{ fontSize: "14px", fontWeight: 500 }}
+            >
+              {product && product.name}
+            </p>
+          </div>
+
           {/* facebook btn group */}
-          <div className="d-flex">
+          <div className="d-none d-sm-flex">
             <button
               className="btn btn-primary p-0 px-1 d-flex align-items-center me-2"
               style={{ maxHeight: "20px" }}
@@ -275,94 +289,193 @@ const MainProductDetail = () => {
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-7">
-          <ProductCarousel items={images} />
-        </div>
-        <div className="col-5">
-          {/* price */}
-          <div
-            className="d-flex align-items-center border-bottom"
-            style={{ height: "60px", fontWeight: 900, fontSize: "20px" }}
-          >
-            <span className="text-danger">
-              {product && thousands_separators(product.price)} ₫
-            </span>
+
+      {/* product information desktop */}
+      <div className="d-none d-sm-block">
+        <div className="row">
+          <div className="col-7">
+            <ProductCarousel items={images} />
           </div>
-          {/* buttons */}
-          <p className="m-0 p-0 fw-bold mt-2 mb-3" style={{ fontSize: "13px" }}>
-            Ưu đãi khi thanh toán
-          </p>
-          <div className="w-100">
-            <button
-              className="btn text-uppercase w-100 text-white py-2"
-              style={{
-                backgroundColor: "#fb6e2e",
-                fontSize: "15px",
-                fontWeight: 400,
-              }}
+          <div className="col-5">
+            {/* price */}
+            <div
+              className="d-flex align-items-center border-bottom"
+              style={{ height: "60px", fontWeight: 900, fontSize: "20px" }}
             >
-              Mua Ngay
-            </button>
-            <div className="w-100 d-flex justify-content-between mt-2">
+              <span className="text-danger">
+                {product && thousands_separators(product.price)} ₫
+              </span>
+            </div>
+            {/* buttons */}
+            <p
+              className="m-0 p-0 fw-bold mt-2 mb-3"
+              style={{ fontSize: "13px" }}
+            >
+              Ưu đãi khi thanh toán
+            </p>
+            <div className="w-100">
               <button
-                className="btn btn-primary text-white"
+                className="btn text-uppercase w-100 text-white py-2"
                 style={{
-                  width: "49%",
+                  backgroundColor: "#fb6e2e",
                   fontSize: "15px",
                   fontWeight: 400,
-                  lineHeight: "15px",
                 }}
               >
-                <span className="text-uppercase">Mua trả góp</span>
-                <br />
-                <span style={{ fontSize: "10px" }}>
-                  Duyệt hồ sơ trong 5 phút
-                </span>
+                Mua Ngay
               </button>
+              <div className="w-100 d-flex justify-content-between mt-2">
+                <button
+                  className="btn btn-primary text-white"
+                  style={{
+                    width: "49%",
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    lineHeight: "15px",
+                  }}
+                >
+                  <span className="text-uppercase">Mua trả góp</span>
+                  <br />
+                  <span style={{ fontSize: "10px" }}>
+                    Duyệt hồ sơ trong 5 phút
+                  </span>
+                </button>
+                <button
+                  className="btn btn-primary text-white"
+                  style={{
+                    width: "49%",
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    lineHeight: "15px",
+                  }}
+                >
+                  <span className="text-uppercase">trả góp 0% qua thẻ</span>
+                  <br />
+                  <span
+                    className="text-capitalize"
+                    style={{ fontSize: "10px" }}
+                  >
+                    visa, mastercard, jcb, amex
+                  </span>
+                </button>
+              </div>
+            </div>
+            {/* contact line */}
+            <p className="text-center mt-2" style={{ fontSize: "13px" }}>
+              Gọi đặt mua{" "}
+              <Link to="#" className="text-decoration-none">
+                1900 0243{" "}
+              </Link>{" "}
+              (7:30 - 22:00)
+            </p>
+            {/* product detail information*/}
+            <div className="product-detail-info">
+              <h6 className="text-uppercase" style={{ fontWeight: 550 }}>
+                Cấu hình chi tiết
+              </h6>
+              <table class="table table-striped table-product-detail-info">
+                {htmlToReactParser.parse(product_detail_info)}
+              </table>
+            </div>
+            {/* show more product detail info */}
+            <div className="w-100 text-center">
               <button
-                className="btn btn-primary text-white"
-                style={{
-                  width: "49%",
-                  fontSize: "15px",
-                  fontWeight: 400,
-                  lineHeight: "15px",
-                }}
+                type="button"
+                className="btn btn-light border-primary text-primary"
+                style={{ fontSize: "14px", width: "60%" }}
               >
-                <span className="text-uppercase">trả góp 0% qua thẻ</span>
-                <br />
-                <span className="text-capitalize" style={{ fontSize: "10px" }}>
-                  visa, mastercard, jcb, amex
-                </span>
+                Xem thêm cấu hình chi tiết
               </button>
             </div>
           </div>
-          {/* contact line */}
-          <p className="text-center mt-2" style={{ fontSize: "13px" }}>
-            Gọi đặt mua{" "}
-            <Link to="#" className="text-decoration-none">
-              1900 0243{" "}
-            </Link>{" "}
-            (7:30 - 22:00)
-          </p>
-          {/* product detail information*/}
-          <div className="product-detail-info">
-            <h6 className="text-uppercase" style={{ fontWeight: 550 }}>
-              Cấu hình chi tiết
-            </h6>
-            <table class="table table-striped table-product-detail-info">
-              {htmlToReactParser.parse(product_detail_info)}
-            </table>
+        </div>
+      </div>
+
+      {/* product information mobile */}
+      <div className="d-block d-sm-none">
+        <div className="row mt-4">
+          <div className="col-12">
+            <ProductCarousel items={images} />
           </div>
-          {/* show more product detail info */}
-          <div className="w-100 text-center">
-            <button
-              type="button"
-              className="btn btn-light border-primary text-primary"
-              style={{ fontSize: "14px", width: "60%" }}
+
+          <div className="col-12">
+            {/* price */}
+            <div
+              className="d-flex align-items-center mt-4"
+              style={{ height: "60px", fontWeight: 900, fontSize: "20px" }}
             >
-              Xem thêm cấu hình chi tiết
-            </button>
+              <span className="text-danger">
+                {product && thousands_separators(product.price)} ₫
+              </span>
+            </div>
+            {/* product detail information*/}
+            <div className="product-detail-info">
+              <h6 className="text-uppercase" style={{ fontWeight: 550 }}>
+                Cấu hình chi tiết
+              </h6>
+              <table class="table table-striped table-product-detail-info">
+                {htmlToReactParser.parse(product_detail_info)}
+              </table>
+            </div>
+            {/* show more product detail info */}
+            <div className="w-100 text-center">
+              <button
+                type="button"
+                className="btn btn-light border-primary text-primary"
+                style={{ fontSize: "14px", width: "60%" }}
+              >
+                Xem thêm cấu hình chi tiết
+              </button>
+            </div>
+
+            {/* buttons */}
+            <div className="w-100 mt-3">
+              <button
+                className="btn text-uppercase w-100 text-white py-2"
+                style={{
+                  backgroundColor: "#fb6e2e",
+                  fontSize: "15px",
+                  fontWeight: 400,
+                }}
+              >
+                Mua Ngay
+              </button>
+              <div className="w-100 d-flex justify-content-between mt-2">
+                <button
+                  className="btn btn-primary text-white"
+                  style={{
+                    width: "49%",
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    lineHeight: "15px",
+                  }}
+                >
+                  <span className="text-uppercase">Mua trả góp</span>
+                  <br />
+                  <span style={{ fontSize: "10px" }}>
+                    Duyệt hồ sơ trong 5 phút
+                  </span>
+                </button>
+                <button
+                  className="btn btn-primary text-white"
+                  style={{
+                    width: "49%",
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    lineHeight: "15px",
+                  }}
+                >
+                  <span className="text-uppercase">trả góp 0% qua thẻ</span>
+                  <br />
+                  <span
+                    className="text-capitalize"
+                    style={{ fontSize: "10px" }}
+                  >
+                    visa, mastercard, jcb, amex
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

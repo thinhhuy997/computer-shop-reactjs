@@ -9,6 +9,16 @@
     height: auto;
 }
 
+/* mobile */
+
+/* mobile screen */
+  @media only screen and (max-width: 576px) {
+    .product-carousel-item {
+        width: 346px;
+        height: auto;
+    }
+}
+
 .carousel-directional-btn {
     z-index: 2 !important;
 }
@@ -32,3 +42,8 @@
     left: 15%;
 }
 
+@media only screen and (max-width: 576px) {
+    .policy-info::before {
+        width: 60%;
+    }
+}

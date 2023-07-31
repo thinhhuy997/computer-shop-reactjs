@@ -90,7 +90,8 @@ const Footer = () => {
             </div>
             {/* <!-- Grid row --> */}
             {/* <!-- Grid row --> */}
-            <div className="row mt-3">
+            {/* hidden only on mobile screen  */}
+            <div className="row mt-3 d-none d-sm-flex">
               {/* <!-- Grid column --> */}
               <div className="col-md-2 col-lg-2 col-xl-3 mx-auto mb-4">
                 {/*  */}
