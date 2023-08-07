@@ -243,7 +243,7 @@ const Cart = () => {
               {/* cart row */}
               <div className="row">
                 <div className="col-xl-8 col-lg-12">
-                  <div className="row d-none d-sm-block border-top border-bottom p-0 mt-4 py-2">
+                  <div className="row d-none d-sm-flex border-top border-bottom p-0 mt-4 py-2">
                     <div className="col-2 text-center ">
                       <span style={{ fontWeight: 400, fontSize: "14px" }}>
                         Sản Phẩm

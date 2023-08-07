@@ -8,7 +8,7 @@ const ProductCarousel = (props) => {
   return (
     <div
       id="productCarousel"
-      class="carousel slide position-relative"
+      className="carousel slide position-relative productCarousel"
       data-bs-ride="carousel"
     >
       <div class="carousel-inner">
