@@ -1083,13 +1083,13 @@ const IntroductorySection = () => {
               <div className="col-4 px-2">
                 <div className="right-side-ads">
                   <img
-                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
+                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
                     alt=""
                     className="w-100 test-img"
                     style={{ objectFit: "fill" }}
                   />
                   <img
-                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
+                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
                     alt=""
                     className="w-100 test-img"
                     style={{ objectFit: "fill" }}
@@ -1102,21 +1102,21 @@ const IntroductorySection = () => {
               {/* BOTTOM ADS */}
               <div className="col-12 d-flex p-0 w-100 bottom-ads">
                 <img
-                  src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                  src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                   alt=""
                   style={{ width: "32.7%" }}
                   className="me-1"
                 />
 
                 <img
-                  src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                  src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                   alt=""
                   style={{ width: "32.7%" }}
                   className="me-1"
                 />
 
                 <img
-                  src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                  src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                   alt=""
                   style={{ width: "32.7%" }}
                 />
