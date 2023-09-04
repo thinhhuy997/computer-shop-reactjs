@@ -22,69 +22,58 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to="/search?q=cpu"
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   CPU - Bộ vi xử lý
                 </Link>
                 <Link
                   to="/collections/cpu-intel"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   CPU Intel
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i3"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I3
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i5"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I5
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i7"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I7
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i9"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I9
                 </Link>
 
                 <Link
                   to="/collections/cpu-amd"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   CPU AMD
                 </Link>
                 <Link
                   to="/search?q=ryzen 7"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 7000 Series
                 </Link>
                 <Link
                   to="/search?q=ryzen 5"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 5000 Series
                 </Link>
                 <Link
                   to="/search?q=ryzen 4"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 4000 Series
                 </Link>
                 <Link
                   to="/search?q=ryzen 3"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 3000 Series
                 </Link>
               </div>
@@ -97,50 +86,42 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/mainboard"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Maiboard - Bo mạch chủ
                 </Link>
                 <Link
                   to="/search?q=mainboard gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Gigabyte
                 </Link>
                 <Link
                   to="/search?q=mainboard asus"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Asus
                 </Link>
                 <Link
                   to="/search?q=mainboard asrock"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Asrock
                 </Link>
                 <Link
                   to="/search?q=mainboard msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard MSI
                 </Link>
                 <Link
                   to="/search?q=mainboard server"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Server
                 </Link>
                 <Link
                   to="/search?q=mainboard huananzhi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard huananzhi
                 </Link>
                 <Link
                   to="/search?q=mainboard vsp"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard VSP
                 </Link>
               </div>
@@ -153,80 +134,67 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to="/collections/graphic-card"
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   VGA - Card Màn Hình
                 </Link>
                 <Link
                   to="/search?q=vga asus"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Asus
                 </Link>
                 <Link
                   to="/search?q=vga gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Gigabyte
                 </Link>
                 <Link
                   to="/search?q=vga radeon"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Radeon
                 </Link>
                 <Link
                   to="/search?q=vga asrock"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Asrock
                 </Link>
                 <Link
                   to="/search?q=vga msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA MSI
                 </Link>
                 <Link
                   to="/search?q=vga powercolor"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA PowerColor
                 </Link>
                 <Link
                   to="/search?q=vga corlorful"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Colorful
                 </Link>
                 <Link
                   to="/search?q=vga zotac"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Zotac
                 </Link>
                 <Link
                   to="/search?q=vga zotac"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Zotac
                 </Link>
                 <Link
                   to="/search?q=vga nvidia"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Nvidia
                 </Link>
                 <Link
                   to="/search?q=vga inno3d"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Inno3D
                 </Link>
                 <Link
                   to="/search?q=vga intel"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Intel
                 </Link>
               </div>
@@ -239,62 +207,52 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/case"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Case - Thùng máy
                 </Link>
                 <Link
                   to="/search?q=case msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case MSI
                 </Link>
                 <Link
                   to="/search?q=case deepcool"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Deepcool
                 </Link>
                 <Link
                   to="/search?q=case jetek"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Jetek
                 </Link>
                 <Link
                   to="/search?q=case vsp"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case VSP
                 </Link>
                 <Link
                   to="/search?q=case thermaltake"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Thermaltake
                 </Link>
                 <Link
                   to="/search?q=case Xigmatek"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Thermaltake
                 </Link>
                 <Link
                   to="/search?q=case mik"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case MIK
                 </Link>
                 <Link
                   to="/search?q=case msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case MSI
                 </Link>
                 <Link
                   to="/search?q=case montech"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Montech
                 </Link>
               </div>
@@ -311,56 +269,47 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to="/collections/psu"
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   PSU - Nguồn máy tính
                 </Link>
                 <Link
                   to="/search?q=Nguồn Cooler Master"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Cooler Master
                 </Link>
                 <Link
                   to="/search?q=Nguồn Corsair"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Corsair
                 </Link>
                 <Link
                   to="/search?q=Nguồn Sagotep"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Sagotep
                 </Link>
                 <Link
                   to="/search?q=Nguồn SilverStone"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn SilverStone
                 </Link>
                 <Link
                   to="/search?q=Nguồn SilverStone"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Xigmatek
                 </Link>
                 <Link
                   to="/search?q=Nguồn MSI"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn MSI
                 </Link>
                 <Link
                   to="/search?q=Nguồn Antec"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Antec
                 </Link>
                 <Link
                   to="/search?q=Nguồn Gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Gigabyte
                 </Link>
               </div>
@@ -373,62 +322,52 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/hard-drive"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   SSD - HDD
                 </Link>
                 <Link
                   to="/search?q=Billion Reservoir"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Billion Reservoir
                 </Link>
                 <Link
                   to="/search?q=SSD Billion Reservoir"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Billion Reservoir
                 </Link>
                 <Link
                   to="/search?q=SSD Lexar"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Lexar
                 </Link>
                 <Link
                   to="/search?q=SSD ADATA"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD ADATA
                 </Link>
                 <Link
                   to="/search?q=SSD Western"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Western
                 </Link>
                 <Link
                   to="/search?q=SSD Samsung"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Samsung
                 </Link>
                 <Link
                   to="/search?q=SSD Kingston"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Kingston
                 </Link>
                 <Link
                   to="/search?q=SSD Kingmax"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Kingmax
                 </Link>
                 <Link
                   to="/search?q=HDD Seagate"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   HDD Seagate
                 </Link>
               </div>
@@ -441,68 +380,57 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/ram"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Bộ nhớ RAM
                 </Link>
                 <Link
                   to="/search?q=ram ddr5"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram DDR5
                 </Link>
                 <Link
                   to="/search?q=ram ddr4"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram DDR4
                 </Link>
                 <Link
                   to="/search?q=ram ddr3"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram DDR3
                 </Link>
                 <Link
                   to="/search?q=ram rgb"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram LED RGB
                 </Link>
                 <Link
                   to="/search?q=ram gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Gigabyte
                 </Link>
                 <Link
                   to="/search?q=ram corsair"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Corsair
                 </Link>
                 <Link
                   to="/search?q=ram Gskill"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Gskill
                 </Link>
                 <Link
                   to="/search?q=ram Kingmax"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Kingmax
                 </Link>
                 <Link
                   to="/search?q=ram Kingmax"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Galax
                 </Link>
                 <Link
                   to="/search?q=ram Adata"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Adata
                 </Link>
               </div>
@@ -515,50 +443,42 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/monitor"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Màn Hình
                 </Link>
                 <Link
                   to="/search?q=Màn hình Samsung"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Samsung
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Dell
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Acer
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Asus
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình LG
                 </Link>
                 <Link
                   to="/search?q=Màn hình 144hz"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình 144hz
                 </Link>
                 <Link
                   to="/search?q=Màn hình 165hz"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình 165hz
                 </Link>
               </div>
@@ -589,80 +509,67 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to="/collections/graphic-card"
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   VGA - Card Màn Hình
                 </Link>
                 <Link
                   to="/search?q=vga asus"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Asus
                 </Link>
                 <Link
                   to="/search?q=vga gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Gigabyte
                 </Link>
                 <Link
                   to="/search?q=vga radeon"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Radeon
                 </Link>
                 <Link
                   to="/search?q=vga asrock"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Asrock
                 </Link>
                 <Link
                   to="/search?q=vga msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA MSI
                 </Link>
                 <Link
                   to="/search?q=vga powercolor"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA PowerColor
                 </Link>
                 <Link
                   to="/search?q=vga corlorful"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Colorful
                 </Link>
                 <Link
                   to="/search?q=vga zotac"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Zotac
                 </Link>
                 <Link
                   to="/search?q=vga zotac"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Zotac
                 </Link>
                 <Link
                   to="/search?q=vga nvidia"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Nvidia
                 </Link>
                 <Link
                   to="/search?q=vga inno3d"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Inno3D
                 </Link>
                 <Link
                   to="/search?q=vga intel"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   VGA Intel
                 </Link>
               </div>
@@ -675,69 +582,58 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to="/search?q=cpu"
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   CPU - Bộ vi xử lý
                 </Link>
                 <Link
                   to="/collections/cpu-intel"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   CPU Intel
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i3"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I3
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i5"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I5
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i7"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I7
                 </Link>
                 <Link
                   to="/search?q=intel%20core%20i9"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Intel Core I9
                 </Link>
 
                 <Link
                   to="/collections/cpu-amd"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   CPU AMD
                 </Link>
                 <Link
                   to="/search?q=ryzen 7"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 7000 Series
                 </Link>
                 <Link
                   to="/search?q=ryzen 5"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 5000 Series
                 </Link>
                 <Link
                   to="/search?q=ryzen 4"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 4000 Series
                 </Link>
                 <Link
                   to="/search?q=ryzen 3"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   AMD 3000 Series
                 </Link>
               </div>
@@ -750,62 +646,52 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/case"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Case - Thùng máy
                 </Link>
                 <Link
                   to="/search?q=case msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case MSI
                 </Link>
                 <Link
                   to="/search?q=case deepcool"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Deepcool
                 </Link>
                 <Link
                   to="/search?q=case jetek"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Jetek
                 </Link>
                 <Link
                   to="/search?q=case vsp"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case VSP
                 </Link>
                 <Link
                   to="/search?q=case thermaltake"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Thermaltake
                 </Link>
                 <Link
                   to="/search?q=case Xigmatek"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Thermaltake
                 </Link>
                 <Link
                   to="/search?q=case mik"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case MIK
                 </Link>
                 <Link
                   to="/search?q=case msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case MSI
                 </Link>
                 <Link
                   to="/search?q=case montech"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Case Montech
                 </Link>
               </div>
@@ -818,50 +704,42 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/mainboard"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Maiboard - Bo mạch chủ
                 </Link>
                 <Link
                   to="/search?q=mainboard gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Gigabyte
                 </Link>
                 <Link
                   to="/search?q=mainboard asus"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Asus
                 </Link>
                 <Link
                   to="/search?q=mainboard asrock"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Asrock
                 </Link>
                 <Link
                   to="/search?q=mainboard msi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard MSI
                 </Link>
                 <Link
                   to="/search?q=mainboard server"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard Server
                 </Link>
                 <Link
                   to="/search?q=mainboard huananzhi"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard huananzhi
                 </Link>
                 <Link
                   to="/search?q=mainboard vsp"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Mainboard VSP
                 </Link>
               </div>
@@ -878,68 +756,57 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/ram"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Bộ nhớ RAM
                 </Link>
                 <Link
                   to="/search?q=ram ddr5"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram DDR5
                 </Link>
                 <Link
                   to="/search?q=ram ddr4"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram DDR4
                 </Link>
                 <Link
                   to="/search?q=ram ddr3"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram DDR3
                 </Link>
                 <Link
                   to="/search?q=ram rgb"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram LED RGB
                 </Link>
                 <Link
                   to="/search?q=ram gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Gigabyte
                 </Link>
                 <Link
                   to="/search?q=ram corsair"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Corsair
                 </Link>
                 <Link
                   to="/search?q=ram Gskill"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Gskill
                 </Link>
                 <Link
                   to="/search?q=ram Kingmax"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Kingmax
                 </Link>
                 <Link
                   to="/search?q=ram Kingmax"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Galax
                 </Link>
                 <Link
                   to="/search?q=ram Adata"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Ram Adata
                 </Link>
               </div>
@@ -952,50 +819,42 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/monitor"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   Màn Hình
                 </Link>
                 <Link
                   to="/search?q=Màn hình Samsung"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Samsung
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Dell
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Acer
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình Asus
                 </Link>
                 <Link
                   to="/search?q=Màn hình Dell"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình LG
                 </Link>
                 <Link
                   to="/search?q=Màn hình 144hz"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình 144hz
                 </Link>
                 <Link
                   to="/search?q=Màn hình 165hz"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Màn hình 165hz
                 </Link>
               </div>
@@ -1008,56 +867,47 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to="/collections/psu"
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   PSU - Nguồn máy tính
                 </Link>
                 <Link
                   to="/search?q=Nguồn Cooler Master"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Cooler Master
                 </Link>
                 <Link
                   to="/search?q=Nguồn Corsair"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Corsair
                 </Link>
                 <Link
                   to="/search?q=Nguồn Sagotep"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Sagotep
                 </Link>
                 <Link
                   to="/search?q=Nguồn SilverStone"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn SilverStone
                 </Link>
                 <Link
                   to="/search?q=Nguồn SilverStone"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Xigmatek
                 </Link>
                 <Link
                   to="/search?q=Nguồn MSI"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn MSI
                 </Link>
                 <Link
                   to="/search?q=Nguồn Antec"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Antec
                 </Link>
                 <Link
                   to="/search?q=Nguồn Gigabyte"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   Nguồn Gigabyte
                 </Link>
               </div>
@@ -1070,62 +920,52 @@ const IntroductorySection = () => {
                 {/* <!-- Content --> */}
                 <Link
                   to={"/collections/hard-drive"}
-                  class="text-uppercase fw-bold mb-3 item-header"
-                >
+                  class="text-uppercase fw-bold mb-3 item-header">
                   SSD - HDD
                 </Link>
                 <Link
                   to="/search?q=Billion Reservoir"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Billion Reservoir
                 </Link>
                 <Link
                   to="/search?q=SSD Billion Reservoir"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Billion Reservoir
                 </Link>
                 <Link
                   to="/search?q=SSD Lexar"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Lexar
                 </Link>
                 <Link
                   to="/search?q=SSD ADATA"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD ADATA
                 </Link>
                 <Link
                   to="/search?q=SSD Western"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Western
                 </Link>
                 <Link
                   to="/search?q=SSD Samsung"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Samsung
                 </Link>
                 <Link
                   to="/search?q=SSD Kingston"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Kingston
                 </Link>
                 <Link
                   to="/search?q=SSD Kingmax"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   SSD Kingmax
                 </Link>
                 <Link
                   to="/search?q=HDD Seagate"
-                  className="m-0 p-0 pb-1 item-name bg-transparent"
-                >
+                  className="m-0 p-0 pb-1 item-name bg-transparent">
                   HDD Seagate
                 </Link>
               </div>
@@ -1149,8 +989,7 @@ const IntroductorySection = () => {
             {/* SIDE BAR */}
             <div
               className="d-none d-xl-flex flex-column align-items-start p-0 border-top border-start border-end border-1 bg-white rounded pt-2 navigation--wrapper"
-              style={{ height: "100%", minWidth: "270px" }}
-            >
+              style={{ height: "100%", minWidth: "270px" }}>
               <HoverMenuButton
                 categoryName="Linh kiện mới"
                 imageLink="//theme.hstatic.net/200000420363/1000874510/14/nav_1.png?v=4006"
@@ -1223,8 +1062,7 @@ const IntroductorySection = () => {
                     <div
                       id="carouselExampleFade"
                       className="carousel slide carousel-fade w-100"
-                      data-bs-ride="carousel"
-                    >
+                      data-bs-ride="carousel">
                       <div className="carousel-inner introductory-carousel w-100">
                         <div className="carousel-item active">
                           <img
@@ -1255,24 +1093,20 @@ const IntroductorySection = () => {
                         class="carousel-control-prev"
                         type="button"
                         data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev"
-                      >
+                        data-bs-slide="prev">
                         <span
                           class="carousel-control-prev-icon"
-                          aria-hidden="true"
-                        ></span>
+                          aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                       </button>
                       <button
                         class="carousel-control-next"
                         type="button"
                         data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next"
-                      >
+                        data-bs-slide="next">
                         <span
                           class="carousel-control-next-icon"
-                          aria-hidden="true"
-                        ></span>
+                          aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
                     </div>
@@ -1331,8 +1165,7 @@ const IntroductorySection = () => {
                 <div
                   id="introductoryCarouselMobile"
                   className="carousel slide carousel-fade d-flex"
-                  data-bs-ride="carousel"
-                >
+                  data-bs-ride="carousel">
                   <div className="carousel-inner introductory-carousel-mobile">
                     <div className="carousel-item active">
                       <img
@@ -1363,24 +1196,20 @@ const IntroductorySection = () => {
                     class="carousel-control-prev"
                     type="button"
                     data-bs-target="#introductoryCarouselMobile"
-                    data-bs-slide="prev"
-                  >
+                    data-bs-slide="prev">
                     <span
                       class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
+                      aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                   </button>
                   <button
                     class="carousel-control-next"
                     type="button"
                     data-bs-target="#introductoryCarouselMobile"
-                    data-bs-slide="next"
-                  >
+                    data-bs-slide="next">
                     <span
                       class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
+                      aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
