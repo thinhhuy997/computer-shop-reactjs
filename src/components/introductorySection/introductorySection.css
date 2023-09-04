@@ -13,9 +13,9 @@
     margin-top: 5px;
 }
 
-/* .right-side-ads img{
+.right-side-ads-temp img{
     object-fit: fill;
-} */
+}
 
 .bottom-ads {
     margin-top: 5px !important;
@@ -30,7 +30,7 @@
         height: 410px;
     }
 
-    .right-side-ads img{
+    .right-side-ads-temp img{
         height: 202px;
         object-fit: fill;
     }
@@ -61,7 +61,7 @@
         height: 300px;
     }
 
-    .right-side-ads img{
+    .right-side-ads-temp img{
         height: 148px;
         object-fit: fill;
     }
@@ -85,7 +85,7 @@
         height: 300px;
     }
 
-    .right-side-ads img{
+    .right-side-ads-temp img{
         height: 148px;
         object-fit: fill;
     }

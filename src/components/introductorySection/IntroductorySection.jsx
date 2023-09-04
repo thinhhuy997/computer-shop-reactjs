@@ -1080,7 +1080,7 @@ const IntroductorySection = () => {
               </div>
               {/* RIGHT SIDE ADS */}
               <div className="col-md-4 col-lg-4 p-0">
-                <div className="right-side-ads">
+                <div className="right-side-ads-temp">
                   <img src={bannerRight1} alt="" className="ms-1" />
                   <img src={bannerRight1} alt="" className="ms-1" />
                 </div>
