@@ -31,7 +31,8 @@
     }
 
     .right-side-ads-temp img{
-        height: 202px;
+        height: 174px;
+        width: auto;
         object-fit: fill;
     }
 
@@ -40,13 +41,19 @@
     }
 
     .bottom-ads-temp img{
-        height: 165.5px;
+        height: 196px;
+        width: auto;
         object-fit: fill;
     }
  }
 
 
 @media (max-width: 1199.98px) { 
+    .right-side-ads-temp img{
+        height: 193px;
+        width: auto;
+        object-fit: fill;
+    }
     .bottom-ads-temp {
         margin-top: 5px !important;
     }

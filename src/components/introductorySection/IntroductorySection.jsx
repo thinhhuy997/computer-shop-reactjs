@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 // import Carousel from "../carousel/Carousel";
 import "./introductorySection.css";
 import bannerRight1 from "../../assets/banner_right_1.webp";
+import bannerRight2 from "../../assets/banner_right_2.webp";
+import bannerBottom1 from "../../assets/banner_bottom_1.webp";
+import bannerBottom2 from "../../assets/banner_bottom_2.webp";
+import bannerBottom3 from "../../assets/banner_bottom_3.webp";
 
 const navigationContent1 = (
   <div className="navigation-content shadow border">
@@ -1081,31 +1085,31 @@ const IntroductorySection = () => {
               {/* RIGHT SIDE ADS */}
               <div className="col-md-4 col-lg-4 p-0">
                 <div className="right-side-ads-temp ms-1">
-                  <img src={bannerRight1} alt="" />
-                  <img src={bannerRight1} alt="" className="mt-1" />
+                  <img src={bannerRight1} alt="" className="test-img" />
+                  <img src={bannerRight2} alt="" className="mt-1" />
                 </div>
               </div>
               {/* BOTTOM ADS */}
-              <div className="col-md-12 col-lg-12 d-flex p-0">
+              <div className="col-md-12 col-lg-12 p-0 border">
                 <div className="bottom-ads-temp">
                   <img
-                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                     alt=""
                     style={{ width: "32.7%" }}
+                    className="me-1"
                   />
 
                   <img
-                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                     alt=""
                     style={{ width: "32.7%" }}
-                    className="ms-1"
+                    className="me-1"
                   />
 
                   <img
-                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                     alt=""
                     style={{ width: "32.7%" }}
-                    className="ms-1"
                   />
                 </div>
               </div>
