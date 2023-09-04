@@ -1080,17 +1080,17 @@ const IntroductorySection = () => {
               </div>
               {/* RIGHT SIDE ADS */}
               <div className="col-md-5 col-lg-5 border">
-                <div className="right-side-ads">
+                <div>
                   <img
                     src={bannerRight1}
                     alt=""
-                    className="w-100 test-img"
+                    className="w-100"
                     style={{ objectFit: "fill" }}
                   />
                   <img
                     src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
                     alt=""
-                    className="w-100 test-img"
+                    className="w-100"
                     style={{ objectFit: "fill" }}
                   />
                 </div>
