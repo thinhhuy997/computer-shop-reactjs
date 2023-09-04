@@ -1080,33 +1080,35 @@ const IntroductorySection = () => {
               </div>
               {/* RIGHT SIDE ADS */}
               <div className="col-md-4 col-lg-4 p-0">
-                <div className="right-side-ads-temp">
-                  <img src={bannerRight1} alt="" className="ms-1" />
-                  <img src={bannerRight1} alt="" className="ms-1" />
+                <div className="right-side-ads-temp ms-1">
+                  <img src={bannerRight1} alt="" />
+                  <img src={bannerRight1} alt="" className="mt-1" />
                 </div>
               </div>
               {/* BOTTOM ADS */}
-              {/* <div className="col-md-12 col-lg-12 d-flex p-0 w-100 bottom-ads border">
-                <img
-                  src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
-                  alt=""
-                  style={{ width: "32.7%" }}
-                  className="me-1"
-                />
+              <div className="col-md-12 col-lg-12 d-flex p-0">
+                <div className="bottom-ads-temp">
+                  <img
+                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                    alt=""
+                    style={{ width: "32.7%" }}
+                  />
 
-                <img
-                  src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
-                  alt=""
-                  style={{ width: "32.7%" }}
-                  className="me-1"
-                />
+                  <img
+                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                    alt=""
+                    style={{ width: "32.7%" }}
+                    className="ms-1"
+                  />
 
-                <img
-                  src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
-                  alt=""
-                  style={{ width: "32.7%" }}
-                />
-              </div> */}
+                  <img
+                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
+                    alt=""
+                    style={{ width: "32.7%" }}
+                    className="ms-1"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           {/* mobile */}
