@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 // import Carousel from "../carousel/Carousel";
-// import "./introductorySection.css";
+import "./introductorySection.css";
 import bannerRight1 from "../../assets/banner_right_1.webp";
 
 const navigationContent1 = (
@@ -1064,7 +1064,7 @@ const IntroductorySection = () => {
             {/* CAROUSEL AND AD IMAGES*/}
             <div className="row introductory-wrapper introductory-ad-carousel">
               {/* carousel */}
-              <div className="col-8 p-0">
+              <div className="col-md-8 col-lg-8 p-0">
                 <div className="box">
                   <Carousel
                     useKeyboardArrows={true}
@@ -1079,7 +1079,7 @@ const IntroductorySection = () => {
                 </div>
               </div>
               {/* RIGHT SIDE ADS */}
-              <div className="col-4">
+              <div className="col-md-4 col-lg-4">
                 <div className="right-side-ads">
                   <img
                     src={bannerRight1}
@@ -1096,7 +1096,7 @@ const IntroductorySection = () => {
                 </div>
               </div>
               {/* BOTTOM ADS */}
-              <div className="col-12 d-flex p-0 w-100 bottom-ads">
+              <div className="col-md-12 col-lg-12 d-flex p-0 w-100 bottom-ads">
                 <img
                   src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                   alt=""
