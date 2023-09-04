@@ -1079,7 +1079,7 @@ const IntroductorySection = () => {
                 </div>
               </div>
               {/* RIGHT SIDE ADS */}
-              <div className="col-md-4 col-lg-4">
+              <div className="col-md-4 col-lg-4 border">
                 <div className="right-side-ads">
                   <img
                     src={bannerRight1}
@@ -1096,7 +1096,7 @@ const IntroductorySection = () => {
                 </div>
               </div>
               {/* BOTTOM ADS */}
-              <div className="col-md-12 col-lg-12 d-flex p-0 w-100 bottom-ads">
+              <div className="col-md-12 col-lg-12 d-flex p-0 w-100 bottom-ads border">
                 <img
                   src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                   alt=""
