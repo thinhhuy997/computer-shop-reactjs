@@ -1055,81 +1055,81 @@ const IntroductorySection = () => {
             </div>
             {/* CAROUSEL AND AD IMAGES*/}
             <div className="row introductory-wrapper introductory-ad-carousel">
-              <div className="col-12">
-                <div className="row main-introductory-ads">
-                  {/* carousel */}
-                  <div className="col-8 p-0">
-                    <div
-                      id="carouselExampleFade"
-                      className="carousel slide carousel-fade w-100"
-                      data-bs-ride="carousel">
-                      <div className="carousel-inner introductory-carousel w-100">
-                        <div className="carousel-item active">
-                          <img
-                            src="https://file.hstatic.net/200000420363/file/slider_1_image_fc5568fef7374019986e1a38ac82ad26.jpg"
-                            className="d-block w-100 introductory-carousel-img"
-                            alt="..."
-                            // style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            src="https://file.hstatic.net/200000420363/file/sli-asus_8426a9a368cb4e11b6319b4d7d2eac6e.jpg"
-                            className="d-block w-100 introductory-carousel-img"
-                            alt="..."
-                            // style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            src="https://file.hstatic.net/200000420363/file/slider_3_image_a51ce838ff07489f89b71c0f13c94bf1.jpg"
-                            className="d-block w-100 introductory-carousel-img"
-                            alt="..."
-                            // style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                      </div>
-                      <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span
-                          class="carousel-control-prev-icon"
-                          aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span
-                          class="carousel-control-next-icon"
-                          aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
-                    </div>
-                  </div>
-                  {/* RIGHT SIDE ADS */}
-                  <div className="col-4 ps-1">
-                    <div className="right-side-ads">
+              {/* <div className="col-12"> */}
+              {/* <div className="row main-introductory-ads"> */}
+              {/* carousel */}
+              <div className="col-8 p-0">
+                <div
+                  id="carouselExampleFade"
+                  className="carousel slide carousel-fade w-100"
+                  data-bs-ride="carousel">
+                  <div className="carousel-inner introductory-carousel w-100">
+                    <div className="carousel-item active">
                       <img
-                        src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
-                        alt=""
-                        className="w-100 test-img"
-                        style={{ objectFit: "fill" }}
+                        src="https://file.hstatic.net/200000420363/file/slider_1_image_fc5568fef7374019986e1a38ac82ad26.jpg"
+                        className="d-block w-100 introductory-carousel-img"
+                        alt="..."
+                        // style={{ objectFit: "cover" }}
                       />
+                    </div>
+                    <div class="carousel-item">
                       <img
-                        src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
-                        alt=""
-                        className="w-100 test-img mt-1"
-                        style={{ objectFit: "fill" }}
+                        src="https://file.hstatic.net/200000420363/file/sli-asus_8426a9a368cb4e11b6319b4d7d2eac6e.jpg"
+                        className="d-block w-100 introductory-carousel-img"
+                        alt="..."
+                        // style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://file.hstatic.net/200000420363/file/slider_3_image_a51ce838ff07489f89b71c0f13c94bf1.jpg"
+                        className="d-block w-100 introductory-carousel-img"
+                        alt="..."
+                        // style={{ objectFit: "cover" }}
                       />
                     </div>
                   </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
               </div>
+              {/* RIGHT SIDE ADS */}
+              <div className="col-4 ps-1">
+                <div className="right-side-ads">
+                  <img
+                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
+                    alt=""
+                    className="w-100 test-img"
+                    style={{ objectFit: "fill" }}
+                  />
+                  <img
+                    src="//theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
+                    alt=""
+                    className="w-100 test-img mt-1"
+                    style={{ objectFit: "fill" }}
+                  />
+                </div>
+              </div>
+              {/* </div> */}
+              {/* </div> */}
 
               {/* BOTTOM ADS */}
 
