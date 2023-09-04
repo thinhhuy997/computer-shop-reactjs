@@ -1079,24 +1079,14 @@ const IntroductorySection = () => {
                 </div>
               </div>
               {/* RIGHT SIDE ADS */}
-              <div className="col-md-4 col-lg-4 border">
-                <div>
-                  <img
-                    src={bannerRight1}
-                    alt=""
-                    className="w-100"
-                    style={{ objectFit: "fill" }}
-                  />
-                  <img
-                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
-                    alt=""
-                    className="w-100"
-                    style={{ objectFit: "fill" }}
-                  />
+              <div className="col-md-4 col-lg-4 p-0">
+                <div className="right-side-ads">
+                  <img src={bannerRight1} alt="" className="ms-1" />
+                  <img src={bannerRight1} alt="" className="ms-1" />
                 </div>
               </div>
               {/* BOTTOM ADS */}
-              <div className="col-md-12 col-lg-12 d-flex p-0 w-100 bottom-ads border">
+              {/* <div className="col-md-12 col-lg-12 d-flex p-0 w-100 bottom-ads border">
                 <img
                   src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_3.jpg?v=4065"
                   alt=""
@@ -1116,7 +1106,7 @@ const IntroductorySection = () => {
                   alt=""
                   style={{ width: "32.7%" }}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           {/* mobile */}
