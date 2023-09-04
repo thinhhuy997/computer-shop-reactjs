@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 // import Carousel from "../carousel/Carousel";
 import "./introductorySection.css";
+import bannerRight1 from "../../assets/banner_right_1.webp";
 
 const navigationContent1 = (
   <div className="navigation-content shadow border">
@@ -1083,7 +1084,7 @@ const IntroductorySection = () => {
               <div className="col-4 px-2">
                 <div className="right-side-ads">
                   <img
-                    src="https://theme.hstatic.net/200000420363/1000874510/14/banner_right_1.jpg?v=4065"
+                    src={bannerRight1}
                     alt=""
                     className="w-100 test-img"
                     style={{ objectFit: "fill" }}
