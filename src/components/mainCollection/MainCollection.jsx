@@ -26,7 +26,7 @@ const MainCollection = (props) => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=${categoryName}`,
+      url: `/api/product-list-create/?categories=${categoryName}`,
     })
       .then((res) => {
         setNextLink(res.data.next);
@@ -56,7 +56,7 @@ const MainCollection = (props) => {
     console.log(orderingParam);
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=${categoryName}&ordering=${orderingParam}`,
+      url: `/api/product-list-create/?categories=${categoryName}&ordering=${orderingParam}`,
     })
       .then((res) => {
         setNextLink(res.data.next);

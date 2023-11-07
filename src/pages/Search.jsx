@@ -28,7 +28,7 @@ const Search = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-multiple-create-page-pagination/?search=${q}&page=${currentPage}`,
+      url: `/api/product-multiple-create-page-pagination/?search=${q}&page=${currentPage}`,
     })
       .then((res) => {
         setNextLink(res.data.next);

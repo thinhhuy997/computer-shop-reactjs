@@ -41,7 +41,7 @@ const MainSearch = (props) => {
   const loadProductsWithOrderingFilter = (orderingParam) => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-multiple-create-page-pagination/?search=${queryParam}&ordering=${orderingParam}`,
+      url: `/api/product-multiple-create-page-pagination/?search=${queryParam}&ordering=${orderingParam}`,
     })
       .then((res) => {
         setNextLink(res.data.next);

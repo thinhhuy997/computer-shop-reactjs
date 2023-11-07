@@ -14,7 +14,7 @@ const Note = () => {
 
   let getNotes = async () => {
     let response = await fetch(
-      "https://computer-shop-drf.onrender.com/api/notes/",
+      "https://docker-computer-shop-drf.onrender.com/api/notes/",
       {
         method: "GET",
         headers: {

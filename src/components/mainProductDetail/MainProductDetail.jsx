@@ -220,7 +220,7 @@ const MainProductDetail = () => {
   const LoadDetailProduct = () => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-detail/${slug}/`,
+      url: `/api/product-detail/${slug}/`,
     })
       .then((res) => {
         setProduct(res.data);

@@ -47,12 +47,9 @@ const Cart = () => {
         const ids = localStorage.getItem("product_ids").split(",");
         try {
           axios
-            .post(
-              "https://computer-shop-drf.onrender.com/api/product-list-by-ids/",
-              {
-                ids: ids,
-              }
-            )
+            .post("/api/product-list-by-ids/", {
+              ids: ids,
+            })
             .then((response) => {
               let addition_data = response.data.results;
               addition_data.map((item) => (item.quantity = 1));

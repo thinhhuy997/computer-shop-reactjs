@@ -11,80 +11,80 @@ import NavigationBarHome from "../components/navigationBarHome/NavigationBarHome
 
 import CartContext from "../contexts/CartContext";
 
-const laptop_products = [
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-  {
-    name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
-    thumbnail:
-      "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
-    price: "1,790,000",
-  },
-];
+// const laptop_products = [
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+//   {
+//     name: "Màn hình LCD 20″ Dahua DHI-LM19-A200 HD TN 60Hz 5Ms",
+//     thumbnail:
+//       "https://product.hstatic.net/200000420363/product/laptop-gaming-msi-gf63-thin-11uc-443vn-_255e80469282415da9aa61986500a7d3_large.jpg",
+//     price: "1,790,000",
+//   },
+// ];
 
 const Home = () => {
   const [vgaProducts, setVgaProducts] = useState([]);
@@ -124,7 +124,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=graphic-card&limit=10`,
+      url: `/api/product-list-create/?categories=graphic-card&limit=10`,
     })
       .then((res) => {
         setVgaProducts(res.data.results);
@@ -137,7 +137,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=monitor&limit=10`,
+      url: `/api/product-list-create/?categories=monitor&limit=10`,
     })
       .then((res) => {
         setMonitorProducts(res.data.results);
@@ -150,7 +150,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=pc-gaming&limit=10`,
+      url: `/api/product-list-create/?categories=pc-gaming&limit=10`,
     })
       .then((res) => {
         setPcgamings(res.data.results);
@@ -163,7 +163,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=laptop-gaming&limit=10&offset=14`,
+      url: `/api/product-list-create/?categories=laptop-gaming&limit=10&offset=14`,
     })
       .then((res) => {
         setLaptops(res.data.results);
@@ -176,7 +176,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=keyboard-mouse-phone&limit=10&offset=`,
+      url: `/api/product-list-create/?categories=keyboard-mouse-phone&limit=10&offset=`,
     })
       .then((res) => {
         setKmps(res.data.results);
@@ -189,7 +189,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=gaming-chair&limit=10&offset=`,
+      url: `/api/product-list-create/?categories=gaming-chair&limit=10&offset=`,
     })
       .then((res) => {
         setGamingChairs(res.data.results);
@@ -202,7 +202,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=webcam&limit=10&offset=`,
+      url: `/api/product-list-create/?categories=webcam&limit=10&offset=`,
     })
       .then((res) => {
         setWebcams(res.data.results);
@@ -215,7 +215,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=psu&limit=10&offset=`,
+      url: `/api/product-list-create/?categories=psu&limit=10&offset=`,
     })
       .then((res) => {
         setPsus(res.data.results);
@@ -228,7 +228,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=hard-drive&limit=10&offset=`,
+      url: `/api/product-list-create/?categories=hard-drive&limit=10&offset=`,
     })
       .then((res) => {
         setHardDrive(res.data.results);
@@ -241,7 +241,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?search=core+i7&limit=10`,
+      url: `/api/product-list-create/?search=core+i7&limit=10`,
     })
       .then((res) => {
         setIntelCpus(res.data.results);
@@ -254,7 +254,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=cpu-amd&limit=10`,
+      url: `/api/product-list-create/?categories=cpu-amd&limit=10`,
     })
       .then((res) => {
         setAmdCpus(res.data.results);
@@ -267,7 +267,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=mainboard&limit=10`,
+      url: `/api/product-list-create/?categories=mainboard&limit=10`,
     })
       .then((res) => {
         setMainboards(res.data.results);
@@ -280,7 +280,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=ram&limit=10`,
+      url: `/api/product-list-create/?categories=ram&limit=10`,
     })
       .then((res) => {
         setRams(res.data.results);
@@ -293,7 +293,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=case&limit=10`,
+      url: `/api/product-list-create/?categories=case&limit=10`,
     })
       .then((res) => {
         setCases(res.data.results);
@@ -306,7 +306,7 @@ const Home = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: `https://computer-shop-drf.onrender.com/api/product-list-create/?categories=camera&limit=10`,
+      url: `/api/product-list-create/?categories=camera&limit=10`,
     })
       .then((res) => {
         setCameras(res.data.results);

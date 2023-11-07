@@ -22,7 +22,7 @@ const HeaderPage = () => {
     if (searchParam != "") {
       axios({
         method: "GET",
-        url: `https://computer-shop-drf.onrender.com/api/product-list-create/?search=${searchParam}&limit=5`,
+        url: `/api/product-list-create/?search=${searchParam}&limit=5`,
       })
         .then((res) => {
           setProducts(res.data.results);
